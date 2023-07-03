@@ -38,6 +38,49 @@
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Scroll*/
+
+
+.scroll-arrow{
+    font-size: 1.25rem;
+    position: absolute;
+
+    top: 92%;
+    left: 50%;
+
+    height: 3rem;
+    width: 0;
+
+    border: 0.05em solid #070606;
+
+
+    z-index: 2;
+
+    transition: ease-in-out 1s;
+
+
+
+}
+
+.scroll-arrow:hover{
+    height: 1rem;
+    cursor: pointer;
+}
+
+.scroll-arrow::before{
+    content: "Scroll";
+
+    font-size: 1.5rem;
+    position: absolute;
+
+    transform: translate(-50%, -110%);
+
+    color: #070606;
+
+}
+
+.scroll-arrow
+
 /* Animations */
 
 @keyframes fadeIn {
