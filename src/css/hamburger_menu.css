@@ -31,7 +31,7 @@
 
 }
 
-.container{
+.menu-hit-box{
     display: inline-block;
 
     position: fixed;
@@ -41,23 +41,23 @@
     background: transparent;
 }
 
-.container, .container *{
+.menu-hit-box, .menu-hit-box *{
     pointer-events: auto;
 }
 
-.container:hover, .container:hover *{
+.menu-hit-box:hover, .menu-hit-box:hover *{
     cursor: pointer;
 }
 
-.container:hover{
+.menu-hit-box:hover{
     height: 1.2rem;
 }
 
-.container:hover .up-line{
+.menu-hit-box:hover .up-line{
     transform: translate(0, -0.3rem);
 }
 
-.container:hover .down-line{
+.menu-hit-box:hover .down-line{
     transform: translate(1rem, 1rem);
 }
 
