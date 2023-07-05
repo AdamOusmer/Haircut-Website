@@ -1,0 +1,57 @@
+.menu{
+
+    position: fixed;
+
+
+    top: 5vh;
+    left: 90vw;
+
+    z-index: 1000;
+}
+
+
+.up-line{
+    transform: translate(0, 0);
+}
+
+.down-line{
+    transform: translate(1rem, 0.7rem);
+}
+
+.lines{
+    display: inline-block;
+
+    position: fixed;
+
+    height: 0.25rem;
+    width: 4rem;
+    background: #E6E7FF;
+
+}
+
+.container{
+    display: inline-block;
+
+    position: fixed;
+
+    height: 1rem;
+    width: 5rem;
+    background: transparent;
+}
+
+.container, .container *{
+    pointer-events: auto;
+}
+
+.container:hover, .container:hover *{
+    cursor: pointer;
+}
+
+.menu-checkbox{
+    display: none;
+}
+
+.menu-label{
+    font-size: 1.25rem;
+
+}

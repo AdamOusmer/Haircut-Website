@@ -1,11 +1,16 @@
-body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
+*{
+    cursor: none;
 
     text-decoration: none;
 
     font-family: "Ortica", sans-serif;
+}
+
+body {
+
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
 }
 
 @font-face {
@@ -25,8 +30,9 @@ body {
     src: url("../../fonts/Ortica/OrticaLinear-Light.woff2") format("woff2"),
     url("../../fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
 }
+
 @font-face {
-    font-family: "Ortica";
+    font-family: "Ozxrtica";
     src: url("../../fonts/Ortica/OrticaLinear-Regular.woff2") format("woff2"),
     url("../../fonts/Ortica/OrticaLinear-Regular.woff") format("woff");
 }

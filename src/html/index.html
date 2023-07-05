@@ -3,24 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Karine Styliste Salon</title>
+
+    <!-- Main sheets -->
+
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/desktop_home.css">
 
     <link rel="stylesheet" href="../css/cursor.css">
 
+    <link rel="stylesheet" href="../css/hamburger_menu.css">
 
 
 
+    <!-- Desktop sheet -->
+    <link rel="stylesheet" href="../css/desktop_home.css">
+
+    <!-- Mobile sheet -->
 </head>
 
 <body>
 
 
+    <div class="menu hoverable">
+
+        <label for="menu-checkbox">
+
+            <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+            <span class="container">
+                <span class="lines up-line"></span>
+                <span class="lines down-line"></span>
+            </span>
+        </label>
+
+    </div>
+
     <div class="landing-image"></div>
 
     <div class="landing-overlay"></div>
 
-    <a id="scroll-arrow">
+    <a id="scroll-arrow" class="hoverable" href="#" style="cursor: none;">
         <div class="scroll-arrow"></div>
     </a>
 
