@@ -106,6 +106,7 @@
 
 .card{
     display: inline-block;
+    position: relative;
     height: 90vh;
     width: 30vw;
     margin-top: 5vh;
@@ -117,34 +118,81 @@
     background-size: cover;
 }
 
-.card1::after{
+.card:before{
     content: "";
-    position: fixed;
+
+    position:absolute;
+    display: block;
+
+    top: 50%;
+    left: 50%;
+
+    font-size: 2rem;
+
+    transform: translate(-50%, -50%);
+
+    background: #E6E7FF88;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+
+    z-index: 1;
+
+    transition: 0.5s ease-in-out;
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background: url("../../image/cards_home/penny_logo.PNG") no-repeat center;
-    background-size: contain;
+    display: block;
 
-    height: 30vh;
-    width:30vw;
+    height: 40vh;
+    width:40vw;
 
     opacity: 0;
-    z-index: 1;
+    z-index: 2;
+
+    transition: 0.5s ease-in-out;
 }
 
-.card1:hover:after{
+.card:hover:after{
     opacity: 1;
+}
+
+.card:hover:before{
+    opacity: 1;
+}
+
+.card1::after{
+    background: url("../../image/cards_home/penny_logo.PNG") no-repeat center;
+    background-size: contain;
 }
 
 .card2{
     background: url("../../image/cards_home/Karine.jpeg") no-repeat center;
     background-size: cover;
 }
+
+.card2::after{
+    background: url("../../image/logo.png") no-repeat center;
+    background-size: contain;
+}
 .card3{
     background: url("../../image/cards_home/formation.jpeg") no-repeat center;
     background-size: cover;
+}
+
+.card3::after{
+    /* TODO add the correct logo for the formation card*/
+    background: url("../../image/logo.png") no-repeat center;
+    background-size: contain;
 }
 
 

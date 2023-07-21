@@ -4,6 +4,8 @@
     text-decoration: none;
 
     font-family: "Ortica", sans-serif;
+
+    color: #E6E7FF;
 }
 
 body {
@@ -40,3 +42,31 @@ body {
 }
 
 /* TODO add cursor effect with viewport of a computer */
+
+.cursor {
+    position: fixed;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #E6E5E3;
+
+    background: #007CA377;
+
+    transform: translate(-50%, -50%);
+
+    transition: 0s;
+
+    z-index: 100000000;
+
+    pointer-events: none;
+}
+
+.hovered {
+    height: 100px;
+    width: 100px;
+    mix-blend-mode: difference;
+
+    cursor: pointer;
+
+}
