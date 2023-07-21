@@ -17,11 +17,19 @@
     <!-- Desktop sheet -->
     <link rel="stylesheet" href="../css/desktop_home.css">
 
-    <!-- Mobile sheet -->
+    <!-- Mobile sheet
+
+    TODO Add it here when it's done
+    -->
+
+
 </head>
 
 <body>
 
+    <div class="menuLayout menuInvisible">
+        
+    </div>
 
     <div class="menu hoverable">
 
@@ -40,14 +48,24 @@
 
     <div class="landing-overlay"></div>
 
-    <a id="scroll-arrow" class="hoverable" href="#" style="cursor: none;">
+    <a id="scroll-arrow" class="hoverable" onclick="scrollWin()" style="cursor: none;">
         <div class="scroll-arrow"></div>
     </a>
+
+
+    <div class="cards">
+
+        <a><div class="card card1 hoverable"></div></a>
+        <a><div class="card card2 hoverable"></div></a>
+        <a><div class="card card3 hoverable"></div></a>
+
+    </div>
+
 
     <div class="cursor"></div>
 
 
-    <script src="../javascript/cursor.js"></script>
+    <script src="../javascript/general.js"></script>
 
 </body>
 </html>

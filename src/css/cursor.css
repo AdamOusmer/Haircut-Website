@@ -11,6 +11,10 @@
     transform: translate(-50%, -50%);
 
     transition: 0s;
+
+    z-index: 100000000;
+
+    pointer-events: none;
 }
 
 .hovered {
@@ -20,5 +24,4 @@
 
     cursor: pointer;
 
-    transition: 0.5s;
 }

@@ -8,8 +8,6 @@
     background-position: center bottom;
     background-repeat: no-repeat;
     position: relative;
-
-    margin-bottom: 5%;
 }
 
 .landing-image::after {
@@ -89,3 +87,64 @@
         opacity: 1;
     }
 }
+
+/* Card selection */
+
+.cards{
+
+    display: inline-flex;
+
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+.card{
+    display: inline-block;
+    height: 90vh;
+    width: 30vw;
+    margin-top: 5vh;
+
+}
+
+.card1{
+    background: url("../../image/cards_home/penny.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.card1::after{
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: url("../../image/cards_home/penny_logo.PNG") no-repeat center;
+    background-size: contain;
+
+    height: 30vh;
+    width:30vw;
+
+    opacity: 0;
+    z-index: 1;
+}
+
+.card1:hover:after{
+    opacity: 1;
+}
+
+.card2{
+    background: url("../../image/cards_home/Karine.jpeg") no-repeat center;
+    background-size: cover;
+}
+.card3{
+    background: url("../../image/cards_home/formation.jpeg") no-repeat center;
+    background-size: cover;
+}
+
+

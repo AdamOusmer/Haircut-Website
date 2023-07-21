@@ -29,6 +29,8 @@
 
     transition: 0.4s ease-in-out;
 
+    mix-blend-mode: darken;
+
 }
 
 .menu-hit-box{
@@ -68,4 +70,25 @@
 .menu-label{
     font-size: 1.25rem;
 
+}
+
+
+
+.menuInvisible{
+    display: none;
+    visibility: hidden;
+}
+
+.menuVisible{
+    display: block;
+    visibility: visible;
+
+    position: absolute;
+
+    z-index: 3;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #000;
 }
