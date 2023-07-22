@@ -140,7 +140,7 @@
 
     z-index: 1;
 
-    transition: 0.5s ease-in-out;
+    transition: 700ms ease-in-out;
 }
 
 .card::after{
