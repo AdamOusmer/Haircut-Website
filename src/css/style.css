@@ -5,7 +5,8 @@
 
     font-family: "Ortica", sans-serif;
 
-    color: #E6E7FF;
+    color: #E6E6EB;
+
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background: #070606;
+    background: #0D0D0F;
     overflow-x: hidden;
 }
 
@@ -36,7 +37,7 @@ body {
 }
 
 @font-face {
-    font-family: "Ozxrtica";
+    font-family: "Ortica";
     src: url("../../fonts/Ortica/OrticaLinear-Regular.woff2") format("woff2"),
     url("../../fonts/Ortica/OrticaLinear-Regular.woff") format("woff");
 }
@@ -63,8 +64,8 @@ body {
 }
 
 .hovered {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     mix-blend-mode: difference;
 
     cursor: pointer;

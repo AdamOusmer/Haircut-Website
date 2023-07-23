@@ -48,7 +48,7 @@
 }
 
 .menu-hit-box:hover, .menu-hit-box:hover *{
-    cursor: pointer;
+    cursor: none;
 }
 
 .menu-hit-box:hover{
