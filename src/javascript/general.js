@@ -12,11 +12,11 @@ document.addEventListener('mousemove', e => {
     targetY = e.clientY;
 });
 
-document.addEventListener('mousedown', (event) => {
+document.addEventListener('mousedown', () => {
     cursor.style.border = '15px solid #E6E6EB';
 })
 
-document.addEventListener('mouseup', (event) => {
+document.addEventListener('mouseup', () => {
     if (mouseHover) {
         cursor.style.border = '25px solid #E6E6EB';
     }
