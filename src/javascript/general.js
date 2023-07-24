@@ -2,39 +2,39 @@
 
 // Tracker
 const cursor = document.querySelector('.cursor');
-const cursorAfter = document.querySelector('.cursorAfter');
-let cursorAfterX = 0;
-let cursorAfterY = 0;
-const transitionSpeed = 0.1; // Adjust this value to control the speed of the transition
-
+const cursorAfter = document.querySelector('.cursorAfter')
+let targetX = 0;
+let targetY = 0;
+let delay = 0.6;
 document.addEventListener('mousemove', e => {
-    cursor.style.top = e.clientY + 'px';
-    cursor.style.left = e.clientX + 'px';
-
-    // Calculate the distance between the current position and the target position for cursorAfter
-    const deltaX = e.clientX - cursorAfterX;
-    const deltaY = e.clientY - cursorAfterY;
-
-    // Update the target position for cursorAfter based on the transition speed
-    cursorAfterX += deltaX * transitionSpeed;
-    cursorAfterY += deltaY * transitionSpeed;
-
-    // Apply the new position to cursorAfter
-    cursorAfter.style.top = cursorAfterY + 'px';
-    cursorAfter.style.left = cursorAfterX + 'px';
+    targetX = e.clientX;
+    targetY = e.clientY;
 });
+
+function updateCursor(){
+
+    cursor.style.top = `${targetY}px`;
+    cursor.style.left = `${targetX}px`;
+
+    cursorAfter.animate({top: `${targetY}px`, left:`${targetX}px`}, {duration: 700, fill: 'forwards'})
+
+    requestAnimationFrame(updateCursor);
+}
+
+updateCursor();
+
 
 // Add event listeners to hoverable elements
 const hoverableElements = document.querySelectorAll('.hoverable');
 
-hoverableElements.forEach(element => {
+hoverableElements.forEach((element) => {
     element.addEventListener('mouseover', () => {
-        cursor.classList.add('hovered');
-    });
-    element.addEventListener('mouseout', () => {
-        cursor.classList.remove('hovered');
+        cursor.style.transform = 'scale(5)'; // Scale the cursor horizontally (3 times the width)
     });
 
+    element.addEventListener('mouseout', () => {
+        cursor.style.transform = 'scale(1)'; // Reset the cursor's scale to its original width
+    });
 });
 
 // Menu toggle
