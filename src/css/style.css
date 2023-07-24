@@ -71,11 +71,12 @@ html{
 
     transform: translate(-50%, -50%);
 
-    transition: 0s;
 
     z-index: 100000000;
 
     mix-blend-mode: difference;
+
+    transition: border-width 500ms ease-in-out;
 
     pointer-events: none;
 }
