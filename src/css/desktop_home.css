@@ -93,11 +93,11 @@
 
     display: flex;
 
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
     box-sizing: border-box;
 
-    margin-top: 5vh;
+    padding: 5vh 0;
 
     align-items: center;
     justify-content: center;
@@ -197,3 +197,42 @@
 
 /* About section */
 
+.about{
+    background: #E6E6EB;
+
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.about *{
+    color: #0D0D0F;
+}
+
+
+
+/* Cards About */
+
+.cardAbout{
+
+    position: relative;
+    height: 20vw;
+    width: 20vw;
+
+    background: #0D0D0F;
+    border: #E6E6EB;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(230, 230, 235, 0.5),
+    0 0 20px rgba(230, 230, 235, 0.5),
+    0 0 30px rgba(230, 230, 235, 0.5);
+
+    transform: skew(5deg, 10deg);
+}
+
+/* footer */
+
+footer{
+    height: 35vh;
+    width: 100vw;
+}

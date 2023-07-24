@@ -50,9 +50,6 @@
     mix-blend-mode: difference;
 }
 
-.menu-hit-box, .menu-hit-box * {
-    pointer-events: auto;
-}
 
 .menu-hit-box:hover, .menu-hit-box:hover * {
     cursor: none;
