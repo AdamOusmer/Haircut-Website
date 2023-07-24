@@ -29,11 +29,11 @@ const hoverableElements = document.querySelectorAll('.hoverable');
 
 hoverableElements.forEach((element) => {
     element.addEventListener('mouseover', () => {
-        cursor.style.transform = 'scale(5)'; // Scale the cursor horizontally (3 times the width)
+        cursor.style.border = '25px solid #E6E6EB'; // Scale the cursor horizontally (3 times the width)
     });
 
     element.addEventListener('mouseout', () => {
-        cursor.style.transform = 'scale(1)'; // Reset the cursor's scale to its original width
+        cursor.style.border = '2px solid #E6E6EB'; // Reset the cursor's scale to its original width
     });
 });
 
