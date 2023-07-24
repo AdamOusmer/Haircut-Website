@@ -18,6 +18,12 @@ body {
     overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+
 @font-face {
     font-family: "Ortica Bold - Angular";
     src: url("../../fonts/Ortica/OrticaAngular-Bold.woff2") format("woff2"),

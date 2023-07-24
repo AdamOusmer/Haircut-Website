@@ -50,8 +50,10 @@ checkbox.addEventListener('change', () => {
 
 function scrollWin() {
     window.scrollTo({
-        top: window.innerHeight,
+        top: window.innerHeight + (0.05 * window.innerHeight),
         behavior: 'smooth'
     });
 }
+
+
 
