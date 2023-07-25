@@ -76,7 +76,7 @@ html{
 
     mix-blend-mode: difference;
 
-    transition: border-width 500ms ease-in-out;
+    transition: border-width 200ms ease-in-out;
 
     pointer-events: none;
 }
@@ -96,8 +96,6 @@ html{
     z-index: 100000000;
 
     mix-blend-mode: difference;
-
-
 
     pointer-events: none;
 }

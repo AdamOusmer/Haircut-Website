@@ -1,17 +1,19 @@
 // Cursor
 
-// Tracker
+// Variables Declaration
 const cursor = document.querySelector('.cursor');
 const cursorAfter = document.querySelector('.cursorAfter')
 let targetX = 0;
 let targetY = 0;
-let mouseHover = false;
+let mouseHover = false; // Check if an element is hovered for the mouseup animation resizing
 
+// Tracker
 document.addEventListener('mousemove', e => {
     targetX = e.clientX;
     targetY = e.clientY;
 });
 
+// Click Event listener
 document.addEventListener('mousedown', () => {
     cursor.style.border = '15px solid #E6E6EB';
 })
@@ -26,6 +28,7 @@ document.addEventListener('mouseup', () => {
     }
 });
 
+// Lag effect on the big circle and instant position update for the dot
 function updateCursor() {
 
     cursor.style.top = `${targetY}px`;
@@ -39,10 +42,10 @@ function updateCursor() {
 updateCursor();
 
 
-// Add event listeners to hoverable elements
-const hoverableElements = document.querySelectorAll('.hoverable');
+// Add event listeners to hovered elements
+const hoveredElements = document.querySelectorAll('.hovered');
 
-hoverableElements.forEach((element) => {
+hoveredElements.forEach((element) => {
     element.addEventListener('mouseover', () => {
         mouseHover = true;
         cursor.style.border = '25px solid #E6E6EB';
@@ -82,8 +85,10 @@ checkbox.addEventListener('change', () => {
 
 function scrollWin() {
     window.scrollTo({
-        top: window.innerHeight + (0.05 * window.innerHeight), behavior: 'smooth'
+        top: window.innerHeight + (0.05 * window.innerHeight), behavior: 'smooth' // Since there is a margin of 5vh, we are adding 5% of the height
     });
+
+
 }
 
 
