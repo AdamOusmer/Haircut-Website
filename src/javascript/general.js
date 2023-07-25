@@ -87,9 +87,24 @@ function scrollWin() {
     window.scrollTo({
         top: window.innerHeight + (0.05 * window.innerHeight), behavior: 'smooth' // Since there is a margin of 5vh, we are adding 5% of the height
     });
+}
 
+// Scroll animation for about section
+
+const yAbout = window.innerHeight * 2 + (0.05 * window.innerHeight) * 2;
+
+function scrollAbout() {
+
+    const verticalScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (verticalScrollPosition >= yAbout) {
+        // TODO find a way to block completely the scroll.
+
+        // TODO add the animation for the cards in the about section
+
+        // TODO check when to release the scroll.
+    }
 
 }
 
-
-
+window.addEventListener('scroll', scrollAbout);

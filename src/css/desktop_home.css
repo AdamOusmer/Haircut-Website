@@ -1,7 +1,7 @@
 /* home page */
 
 .landing-image {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url("../../image/home.png");
     background-size: cover;
@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.25);
 }
@@ -33,7 +33,7 @@
     height: 30rem;
     width: 30rem;
     z-index: 1;
-    border-radius: 100%;;
+    border-radius: 100%;
 
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -45,7 +45,7 @@
     font-size: 1.25rem;
     position: absolute;
 
-    top: 92%;
+    top: 90%;
     left: 50%;
 
     height: 3rem;
@@ -100,7 +100,6 @@
 
     align-items: center;
     justify-content: center;
-
     gap: 1rem;
 }
 
@@ -125,10 +124,9 @@
 
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 
     font-size: 2rem;
-
-    transform: translate(-50%, -50%);
 
     background: #E6E7FF88;
 
@@ -201,18 +199,16 @@
 
     background: #E6E6EB;
 
-
-    width: 90%;
+    width: 90vw;
     height: 90vh;
 
     padding: 5vh 5vw;
 
+    overflow-x: hidden;
 }
 
 .about * {
     color: #0D0D0F;
-
-
 }
 
 .aboutHeader {
@@ -228,7 +224,7 @@
 
     gap: 10vw;
 
-    width: 90%;
+    width: 90vw;
 }
 
 .textAbout {
@@ -238,7 +234,6 @@
 
     display: block;
 
-    margin-right: 5vw;
 
 }
 
@@ -247,6 +242,7 @@
 
 .cardsAbout {
     position: relative;
+
     height: 60vh;
     width: 60vh;
 }
@@ -254,21 +250,19 @@
 .cardAbout, .cardAboutGlass {
     position: absolute;
 
-    height: 40vh;
-    width: 40vh;
+    height: 20vw;
+    width: 20vw;
 
     border-radius: 16px;
 
     transform: skewY(10deg);
 }
 
-.cardAboutGlass{
+.cardAboutGlass {
     /* From https://css.glass */
     background: rgba(13, 13, 15, 0.20);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    border: 1px solid rgba(13, 13, 15, 0.60);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(13, 13, 15, 1);
 }
 
 .cardAbout1, .cardAboutGlass1 {
@@ -299,22 +293,22 @@
 }
 
 
-.cardAbout1{
+.cardAbout1 {
     background: url("../../image/logoWithBackground.jpg");
     background-size: cover;
 }
 
-.cardAbout2{
+.cardAbout2 {
     background: url("../../image/cardAbout/Karine.jpg");
     background-size: cover;
 }
 
-.cardAbout3{
+.cardAbout3 {
     background: url("../../image/cardAbout/penny.JPG");
     background-size: cover;
 }
 
-.cardAbout4{
+.cardAbout4 {
     background: url("../../image/cardAbout/sacha.jpeg");
     background-size: cover;
 }

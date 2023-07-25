@@ -25,6 +25,7 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
+    cursor: none;
 }
 
 html{
