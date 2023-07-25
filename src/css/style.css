@@ -58,9 +58,9 @@ html{
     url("../../fonts/Ortica/OrticaLinear-Regular.woff") format("woff");
 }
 
-/* TODO add cursor effect with viewport of a computer */
+/* TODO add cursorDot effect with viewport of a computer */
 
-.cursor {
+.cursorDot {
     position: fixed;
 
     width: 0;
@@ -81,7 +81,7 @@ html{
     pointer-events: none;
 }
 
-.cursorAfter{
+.cursorCircle{
     position:fixed;
 
 

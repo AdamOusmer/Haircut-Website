@@ -1,8 +1,8 @@
 // Cursor
 
 // Variables Declaration
-const cursor = document.querySelector('.cursor');
-const cursorAfter = document.querySelector('.cursorAfter')
+const cursorDot = document.querySelector('.cursorDot');
+const cursorCircle = document.querySelector('.cursorCircle')
 let targetX = 0;
 let targetY = 0;
 let mouseHover = false; // Check if an element is hovered for the mouseup animation resizing
@@ -15,26 +15,26 @@ document.addEventListener('mousemove', e => {
 
 // Click Event listener
 document.addEventListener('mousedown', () => {
-    cursor.style.border = '15px solid #E6E6EB';
+    cursorDot.style.border = '15px solid #E6E6EB';
 })
 
 document.addEventListener('mouseup', () => {
     if (mouseHover) {
-        cursor.style.border = '25px solid #E6E6EB';
+        cursorDot.style.border = '25px solid #E6E6EB';
     }
 
     if (!mouseHover) {
-        cursor.style.border = '2px solid #E6E6EB';
+        cursorDot.style.border = '2px solid #E6E6EB';
     }
 });
 
 // Lag effect on the big circle and instant position update for the dot
 function updateCursor() {
 
-    cursor.style.top = `${targetY}px`;
-    cursor.style.left = `${targetX}px`;
+    cursorDot.style.top = `${targetY}px`;
+    cursorDot.style.left = `${targetX}px`;
 
-    cursorAfter.animate({top: `${targetY}px`, left: `${targetX}px`}, {duration: 700, fill: 'forwards'})
+    cursorCircle.animate({top: `${targetY}px`, left: `${targetX}px`}, {duration: 700, fill: 'forwards'})
 
     requestAnimationFrame(updateCursor);
 }
@@ -48,12 +48,12 @@ const hoveredElements = document.querySelectorAll('.hovered');
 hoveredElements.forEach((element) => {
     element.addEventListener('mouseover', () => {
         mouseHover = true;
-        cursor.style.border = '25px solid #E6E6EB';
+        cursorDot.style.border = '25px solid #E6E6EB';
     });
 
     element.addEventListener('mouseout', () => {
         mouseHover = false;
-        cursor.style.border = '2px solid #E6E6EB';
+        cursorDot.style.border = '2px solid #E6E6EB';
     });
 });
 
