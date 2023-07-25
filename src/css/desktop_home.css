@@ -88,7 +88,7 @@
 
 /* Card selection */
 
-.cards{
+.cards {
 
     display: flex;
 
@@ -104,7 +104,7 @@
     gap: 1rem;
 }
 
-.card{
+.card {
     display: flex;
     position: relative;
 
@@ -112,15 +112,15 @@
     width: 30vw;
 }
 
-.card1{
+.card1 {
     background: url("../../image/cards_home/penny.jpg") no-repeat center;
     background-size: cover;
 }
 
-.card:before{
+.card:before {
     content: "";
 
-    position:absolute;
+    position: absolute;
     display: block;
 
     top: 50%;
@@ -142,7 +142,7 @@
     transition: 700ms ease-in-out;
 }
 
-.card::after{
+.card::after {
     content: "";
     position: absolute;
 
@@ -153,7 +153,7 @@
     display: block;
 
     height: 40vh;
-    width:40vw;
+    width: 40vw;
 
     opacity: 0;
     z-index: 2;
@@ -161,34 +161,35 @@
     transition: 0.5s ease-in-out;
 }
 
-.card:hover:after{
+.card:hover:after {
     opacity: 1;
 }
 
-.card:hover:before{
+.card:hover:before {
     opacity: 1;
 }
 
-.card1::after{
+.card1::after {
     background: url("../../image/cards_home/penny_logo.PNG") no-repeat center;
     background-size: contain;
 }
 
-.card2{
+.card2 {
     background: url("../../image/cards_home/Karine.jpeg") no-repeat center;
     background-size: cover;
 }
 
-.card2::after{
+.card2::after {
     background: url("../../image/logo.png") no-repeat center;
     background-size: contain;
 }
-.card3{
+
+.card3 {
     background: url("../../image/cards_home/formation.jpeg") no-repeat center;
     background-size: cover;
 }
 
-.card3::after{
+.card3::after {
     /* TODO add the correct logo for the formation card*/
     background: url("../../image/logo.png") no-repeat center;
     background-size: contain;
@@ -196,33 +197,38 @@
 
 /* About section */
 
-.about{
+.about {
 
-    outline: red dotted;
     background: #E6E6EB;
 
 
-    width: 90vw;
+    width: 90%;
     height: 90vh;
 
     padding: 5vh 5vw;
 
 }
 
-.about *{
-    outline: red dotted;
+.about * {
     color: #0D0D0F;
+
 
 }
 
-.aboutContent{
+.aboutHeader {
+    font-size: 3rem;
+
+    margin: 5vh 0 5vh 0;
+}
+
+.aboutContent {
     display: flex;
     align-items: center;
     justify-content: center;
 
     gap: 10vw;
 
-    width: 90vw;
+    width: 90%;
 }
 
 .textAbout {
@@ -232,33 +238,91 @@
 
     display: block;
 
+    margin-right: 5vw;
+
 }
 
 /* Cards About */
 
 
-.cardsAbout{
+.cardsAbout {
     position: relative;
+    height: 60vh;
+    width: 60vh;
 }
 
-.cardAbout{
-    position absolute;
+.cardAbout, .cardAboutGlass {
+    position: absolute;
 
     height: 40vh;
     width: 40vh;
 
-    border: 5px solid #0D0D0F33;
-    border-radius: 50px;
+    border-radius: 16px;
 
-    transform: skewY(5deg);
+    transform: skewY(10deg);
+}
+
+.cardAboutGlass{
+    /* From https://css.glass */
+    background: rgba(13, 13, 15, 0.20);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(13, 13, 15, 0.60);
+}
+
+.cardAbout1, .cardAboutGlass1 {
+
+    left: 0;
+    top: 20%;
+
+}
+
+.cardAbout2, .cardAboutGlass2 {
+
+    left: 10%;
+    top: 15%
+
+}
+
+.cardAbout3, .cardAboutGlass3 {
+
+    left: 20%;
+    top: 10%
+}
+
+.cardAbout4, .cardAboutGlass4 {
+
+    left: 30%;
+    top: 5%;
 
 }
 
 
+.cardAbout1{
+    background: url("../../image/logoWithBackground.jpg");
+    background-size: cover;
+}
+
+.cardAbout2{
+    background: url("../../image/cardAbout/Karine.jpg");
+    background-size: cover;
+}
+
+.cardAbout3{
+    background: url("../../image/cardAbout/penny.JPG");
+    background-size: cover;
+}
+
+.cardAbout4{
+    background: url("../../image/cardAbout/sacha.jpeg");
+    background-size: cover;
+}
+
 
 /* footer */
 
-footer{
+footer {
     height: 35vh;
     width: 100vw;
 }
