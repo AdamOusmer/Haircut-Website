@@ -53,7 +53,6 @@
 
     border: 0.06em solid #0D0D0F;
 
-
     z-index: 2;
 
     transition: ease-in-out 1s;
@@ -198,61 +197,63 @@
 /* About section */
 
 .about{
+
+    outline: red dotted;
     background: #E6E6EB;
 
 
-    width: 100vw;
-    height: 100vh;
+    width: 90vw;
+    height: 90vh;
 
     padding: 5vh 5vw;
 
 }
 
 .about *{
+    outline: red dotted;
     color: #0D0D0F;
+
 }
 
+.aboutContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    gap: 10vw;
+
+    width: 90vw;
+}
+
+.textAbout {
+    white-space: pre-wrap;
+    width: 30vw;
+    text-align: justify;
+
+    display: block;
+
+}
 
 /* Cards About */
+
 
 .cardsAbout{
     position: relative;
 }
 
 .cardAbout{
+    position absolute;
 
-    position: absolute;
-    display: flex;
+    height: 40vh;
+    width: 40vh;
 
-    height: 20vw;
-    width: 20vw;
+    border: 5px solid #0D0D0F33;
+    border-radius: 50px;
 
-    background: #0D0D0F;
-    border: #E6E6EB;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(230, 230, 235, 0.5),
-    0 0 20px rgba(230, 230, 235, 0.5),
-    0 0 30px rgba(230, 230, 235, 0.5);
+    transform: skewY(5deg);
 
-    transform: skew(0, 15deg);
 }
 
-
-.cardAbout1{
-    margin: 15% 15% 0 0;
-}
-
-.cardAbout2{
-    margin: 10% 10% 0 0;
-}
-
-.cardAbout3{
-    margin: 5% 5% 0 0;
-}
-
-.cardAbout4{
-}
 
 
 /* footer */
