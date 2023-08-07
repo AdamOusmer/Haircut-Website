@@ -16,6 +16,11 @@
     background: transparent;
 }
 
+/* Menu opened layout */
+
+
+
+/* Hamburger menu*/
 
 .up-line {
     transform: translate(0, 0);
@@ -92,7 +97,7 @@
     width: 100vw;
     height: 100vh;
 
-    background: #000;
+    background: #0D0D0F;
 }
 
 

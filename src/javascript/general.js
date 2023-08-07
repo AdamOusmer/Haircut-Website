@@ -68,15 +68,11 @@ checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
         menu.classList.add('menuVisible');
         menu.classList.remove('menuInvisible')
-
-        lines.setAttribute('style', `background-color: #007CA3;`)
-
+        document.body.classList.add('menu-opened')
     } else {
         menu.classList.add('menuInvisible')
         menu.classList.remove('menuVisible');
-
-        lines.setAttribute('style', `background-color: #E6E7FF;`)
-
+        document.body.classList.remove('menu-opened')
     }
 });
 
@@ -89,22 +85,5 @@ function scrollWin() {
     });
 }
 
-// Scroll animation for about section
 
-const yAbout = window.innerHeight * 2 + (0.05 * window.innerHeight) * 2;
 
-function scrollAbout() {
-
-    const verticalScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (verticalScrollPosition >= yAbout) {
-        // TODO find a way to block completely the scroll.
-
-        // TODO add the animation for the cards in the about section
-
-        // TODO check when to release the scroll.
-    }
-
-}
-
-window.addEventListener('scroll', scrollAbout);

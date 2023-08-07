@@ -17,6 +17,7 @@ body {
     background: #0D0D0F;
 
     overflow-x: hidden;
+    overflow-y: visible;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -26,6 +27,10 @@ body {
 body::-webkit-scrollbar {
     display: none;
     cursor: none;
+}
+
+body.menu-opened {
+    position: fixed;
 }
 
 html{
