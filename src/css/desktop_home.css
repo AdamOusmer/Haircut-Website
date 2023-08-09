@@ -73,20 +73,6 @@
     color: #0D0D0F;
 }
 
-.scroll-arrow
-
-/* Animations */
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-
 /* Card selection */
 
 .cards {

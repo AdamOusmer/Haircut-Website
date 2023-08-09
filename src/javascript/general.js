@@ -126,21 +126,43 @@ moreButton.addEventListener('mouseleave', () => {
 
 // menu Logo animation
 
-const menuLogo = Array.from(document.getElementsByClassName('.imageMenu'));
+const menuLogo = Array.from(document.getElementsByClassName('imageMenu'));
+const maxExtension = [10, 20, 35, 55, 85];
 
 function animateLogo() {
 
-    let maxExtension = [30, 25, 15, 10, 5];
-    if(menuOpened) {
-
+    if (menuOpened) {
         menuLogo.forEach((logo, index) => {
-            let x = targetX / window.innerWidth;
-            let y = targetY / window.innerHeight;
 
-            logo.style.transform = 'translate(' + (x > maxExtension[index] ? maxExtension[index] : x) + '%, ' + (y > maxExtension[index] ? maxExtension[index] : y) + '%)';
+            let x = targetX / window.innerWidth * 100;
+            let y = targetY / window.innerHeight * 100;
+
+            if (x >= 0 && x < 50) {
+                x = -50 + x;
+            }
+            else if (x >= 50 && x < 100) {
+                x = x - 50;
+            }
+
+            if (y >= 0 && y < 50) {
+                console.log(y)
+                y = -50 + y;
+                console.log(y)
+            }
+            else if (y >= 50 && y < 100) {
+                y = y - 50;
+            }
+
+            x = x * maxExtension[index] / 1000;
+            y = y * maxExtension[index] / 1000;
+            console.log(y)
+
+            logo.animate({top: `${y + 50}%`, left: `${x + 50}%`}, {duration: 1000, fill: 'both'})
 
         })
     }
+
+    requestAnimationFrame(animateLogo); // Call the function again for the next animation frame
 }
 
-window.addEventListener('mousemove', animateLogo);
+animateLogo()

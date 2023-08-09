@@ -18,7 +18,7 @@
 
 /* Menu opened layout */
 
-.imagesMenu img {
+.imageMenu{
     position:absolute;
     display: block;
 
@@ -29,9 +29,30 @@
     width: 50vw;
     height: auto;
 
+    opacity: 0.9;
+}
+
+.imgMenu1{
+    -webkit-filter: grayscale(1) invert(0.2);
+    filter: grayscale(1) invert(0.2);
+}
+.imgMenu2{
+    -webkit-filter: grayscale(1) invert(0.3);
+    filter: grayscale(1) invert(0.3);
+}
+.imgMenu3{
     -webkit-filter: grayscale(1) invert(0.4);
     filter: grayscale(1) invert(0.4);
 }
+.imgMenu4{
+    -webkit-filter: grayscale(1) invert(0.5);
+    filter: grayscale(1) invert(0.5);
+}
+.imgMenu5{
+    -webkit-filter: grayscale(1) invert(0.8);
+    filter: grayscale(1) invert(0.8);
+}
+
 
 .contentMenu{
     z-index: 1;
