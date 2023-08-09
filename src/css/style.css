@@ -9,6 +9,10 @@
 
 }
 
+:root {
+    color-scheme: only light;
+}
+
 body {
 
     height: 100vh;
