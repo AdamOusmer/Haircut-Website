@@ -16,6 +16,74 @@
     background: transparent;
 }
 
+.socialMedias-Wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    bottom: 5%;
+    right: 5%;
+
+    gap: 3vw;
+}
+
+.socialMedias-Wrapper a{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    text-decoration: none;
+    overflow: hidden;
+
+    padding: 1rem 0;
+    width: 5vw;
+    height: 5vh;
+
+    background: #121315;
+    background-size: 200%;
+    color: #E6E6EB;
+    border-radius: 2rem;
+
+    border: none;
+}
+
+.socialMedias-Wrapper a:hover::before {
+    transform: scaleX(1);
+}
+
+
+.socialMedias-Wrapper a::before {
+    content: '';
+    position: absolute;
+    overflow: hidden;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: inherit;
+    height: 8vh;
+    border-radius: inherit;
+    background: linear-gradient(
+            82.3deg,
+            #36364410.8%,
+            #E0E0E5 94.3%
+    );
+    transition: all 0.4s;
+}
+
+.socialMedias-Wrapper a img{
+    position: relative;
+    z-index: 1;
+
+    width: auto;
+    height: 5vh;
+
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+}
+
 /* Menu opened layout */
 
 .menuLayout{
