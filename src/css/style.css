@@ -9,9 +9,6 @@
 
 }
 
-:root {
-    color-scheme: only light;
-}
 
 body {
 
@@ -25,7 +22,6 @@ body {
 
     scrollbar-width: none;
     -ms-overflow-style: none;
-
 }
 
 body::-webkit-scrollbar {
