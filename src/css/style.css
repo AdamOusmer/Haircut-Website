@@ -29,10 +29,6 @@ body::-webkit-scrollbar {
     cursor: none;
 }
 
-body.menu-opened {
-    position: fixed;
-}
-
 html{
     scroll-behavior: smooth;
     cursor:none;

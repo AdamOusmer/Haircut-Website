@@ -64,16 +64,23 @@ hoveredElements.forEach((element) => {
 const checkbox = document.querySelector('#menu-checkbox');
 const menu = document.querySelector('.menuLayout');
 
-checkbox.addEventListener('change', () => {
+checkbox.addEventListener('change', async() => {
     if (checkbox.checked) {
         menu.classList.add('menuVisible');
         menu.classList.remove('menuInvisible')
-        document.body.classList.add('menu-opened')
+
+        
+        await menu.animate( {top : '0'}, {duration: 800, easing: 'ease-in-out', fill: 'both'}).finished;
+
         menuOpened = true;
     } else {
+        await menu.animate( {top : '-100%'}, {duration: 800, easing: 'ease-in-out', fill: 'both'}).finished;
+
         menu.classList.add('menuInvisible')
         menu.classList.remove('menuVisible');
-        document.body.classList.remove('menu-opened')
+
+
+
         menuOpened = false;
     }
 });

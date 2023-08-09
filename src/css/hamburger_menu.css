@@ -18,6 +18,12 @@
 
 /* Menu opened layout */
 
+.menuLayout{
+    position: fixed;
+
+    top: -100%;
+}
+
 .imageMenu{
     position:absolute;
     display: block;
