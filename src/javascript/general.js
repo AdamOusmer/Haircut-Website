@@ -69,12 +69,12 @@ checkbox.addEventListener('change', async() => {
         menu.classList.add('menuVisible');
         menu.classList.remove('menuInvisible')
 
-        
-        await menu.animate( {top : '0'}, {duration: 800, easing: 'ease-in-out', fill: 'both'}).finished;
+
+        await menu.animate( {top : '0'}, {duration: 600, easing: 'ease-in-out', fill: 'both'}).finished;
 
         menuOpened = true;
     } else {
-        await menu.animate( {top : '-100%'}, {duration: 800, easing: 'ease-in-out', fill: 'both'}).finished;
+        await menu.animate( {top : '-100%'}, {duration: 600, easing: 'ease-in-out', fill: 'both'}).finished;
 
         menu.classList.add('menuInvisible')
         menu.classList.remove('menuVisible');

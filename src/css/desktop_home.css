@@ -63,7 +63,7 @@
 }
 
 .scroll-arrow::before {
-    content: "Scroll";
+    content: "Défiler";
 
     font-size: 1.5rem;
     position: absolute;
