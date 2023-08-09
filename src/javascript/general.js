@@ -63,7 +63,6 @@ hoveredElements.forEach((element) => {
 
 const checkbox = document.querySelector('#menu-checkbox');
 const menu = document.querySelector('.menuLayout');
-const lines = document.querySelectorAll('.lines');
 
 checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
@@ -94,18 +93,25 @@ const contactButton = document.querySelector('.contactButton');
 const moreButton = document.querySelector('.moreButton');
 const contactStyle = document.querySelector('.contact')
 const moreStyle = document.querySelector('.more')
-const about = document.querySelector('.about')
+const text = document.querySelectorAll('.textAbout')
+const logoAbout = document.querySelector('.imgAbout')
 
 contactButton.addEventListener('mouseenter', () => {
     contactStyle.classList.add('hoveredButtons');
     moreButton.style.visibility = 'hidden';
-    about.style.background = '#0d0d0d';
+    text.forEach((element) => {
+        element.style.color = '#E6E6EB';
+    })
+    logoAbout.style.visibility = 'hidden';
 });
 
 contactButton.addEventListener('mouseleave', () => {
     contactStyle.classList.remove('hoveredButtons');
     moreButton.style.visibility = 'visible';
-    about.style.background = '#E6E6EB';
+    text.forEach((element) => {
+        element.style.color = '#0d0d0d';
+    })
+    logoAbout.style.visibility = 'visible';
 
 });
 
@@ -113,14 +119,20 @@ contactButton.addEventListener('mouseleave', () => {
 moreButton.addEventListener('mouseenter', () => {
     moreStyle.classList.add('hoveredButtons');
     contactButton.style.visibility = 'hidden';
-    about.style.background = '#0d0d0d';
+    text.forEach((element) => {
+        element.style.color = '#E6E6EB';
+    })
+    logoAbout.style.visibility = 'hidden';
 
 });
 
 moreButton.addEventListener('mouseleave', () => {
     moreStyle.classList.remove('hoveredButtons');
     contactButton.style.visibility = 'visible';
-    about.style.background = '#E6E6EB';
+    text.forEach((element) => {
+        element.style.color = '#0d0d0d';
+    })
+    logoAbout.style.visibility = 'visible';
 
 });
 
@@ -145,9 +157,7 @@ function animateLogo() {
             }
 
             if (y >= 0 && y < 50) {
-                console.log(y)
                 y = -50 + y;
-                console.log(y)
             }
             else if (y >= 50 && y < 100) {
                 y = y - 50;
@@ -155,9 +165,11 @@ function animateLogo() {
 
             x = x * maxExtension[index] / 1000;
             y = y * maxExtension[index] / 1000;
-            console.log(y)
 
-            logo.animate({top: `${y + 50}%`, left: `${x + 50}%`}, {duration: 1000, fill: 'both'})
+            logo.animate(
+                { transform: `translate(${x - 50}%, ${y - 50}%)` },
+                { duration: 1000, easing: 'ease-in-out', fill: 'both' }
+            );
 
         })
     }

@@ -266,7 +266,10 @@
     font-size: 200px;
     font-weight: 700;
 
-    color: #E6E6EB;
+    border-radius: 95px;
+    text-shadow:  15px 15px 20px #7c7c7f,
+    -15px -15px 20px #ffffff;
+
 }
 
 .left-element img{
@@ -277,7 +280,7 @@
 /* footer */
 
 footer {
-    height: 40vh;
+    height: 30vh;
     width: 100vw;
 }
 

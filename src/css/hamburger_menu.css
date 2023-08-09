@@ -58,6 +58,68 @@
     z-index: 1;
 }
 
+.links{
+    position: absolute;
+    display: grid;
+    align-content: center;
+    gap: 5%;
+
+
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+
+    width: auto;
+    height: 100%;
+
+    opacity: 0.9;
+}
+
+.links a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    height: 3rem;
+    padding: 0 2rem;
+    background: #121315;
+    background-size: 200%;
+    color: #E6E6EB;
+    border-radius: 2rem;
+
+    border: none;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a:hover::before {
+    transform: scaleX(1.5);
+}
+
+.links a h3 {
+    position: relative;
+    z-index: 1;
+}
+
+.links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+            82.3deg,
+            #36364410.8%,
+            #E0E0E5 94.3%
+    );
+    transition: all 0.8s;
+}
+
 /* Hamburger menu*/
 
 .up-line {
