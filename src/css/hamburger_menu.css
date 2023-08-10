@@ -92,6 +92,10 @@
     top: -100%;
 }
 
+.menuLayout * {
+    user-select: none;
+}
+
 .imageMenu{
     position:absolute;
     display: block;
