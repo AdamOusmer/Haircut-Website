@@ -86,13 +86,13 @@
 
 /* Menu opened layout */
 
-.menuLayout{
+nav{
     position: fixed;
 
     top: -100%;
 }
 
-.menuLayout * {
+nav * {
     user-select: none;
 }
 

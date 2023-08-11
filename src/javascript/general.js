@@ -62,7 +62,7 @@ hoveredElements.forEach((element) => {
 // Menu toggle
 
 const checkbox = document.querySelector('#menu-checkbox');
-const menu = document.querySelector('.menuLayout');
+const menu = document.querySelector('.navigation');
 
 checkbox.addEventListener('change', async() => {
     if (checkbox.checked) {

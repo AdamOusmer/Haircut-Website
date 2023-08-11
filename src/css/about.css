@@ -1,0 +1,124 @@
+main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5vh;
+    margin-top: 5vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5vh;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+
+
+    height: 85vh;
+    width: 100%;
+
+    gap: 10vh;
+
+}
+
+section.Karine {
+    background: #E6E6EB;
+
+
+    background: url("../../image/cards_home/Karine.jpeg") no-repeat center;
+    background-size: cover;
+}
+
+section.Penny {
+    background: #E6E6EB;
+
+
+    background: url("../../image/cardAbout/penny.jpg") no-repeat center;
+    background-size: cover;
+    filter: grayscale(100%) brightness(120%) contrast(110%);}
+
+section.Sacha {
+
+
+
+    background: url("../../image/cardAbout/sacha.jpg") no-repeat center;
+    background-size: cover;
+    filter: grayscale(100%) brightness(100%) contrast(110%);}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    backdrop-filter: blur(13px) saturate(0%);
+    -webkit-backdrop-filter: blur(13px) saturate(0%);
+    background-color: rgba(13, 13, 15, 0.35);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    padding: 2rem;
+    width: 50%;
+
+}
+
+section h1{
+    color: #E6E6EB;
+
+}
+section pre {
+    white-space: pre-wrap;
+    text-align: justify;
+
+    color: #E6E6EB;
+
+}
+
+section a img {
+    height: 5vh;
+    width: auto;
+
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+}
+
+.social-media {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20%;
+
+}
+
+
+.social-media a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5%;
+
+    backdrop-filter: blur(13px) saturate(0%);
+    -webkit-backdrop-filter: blur(13px) saturate(0%);
+    background-color: rgba(13, 13, 15, 0.35);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}

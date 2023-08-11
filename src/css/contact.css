@@ -1,4 +1,4 @@
-.mainContact {
+main {
     background-color: #E6E6EB;
     padding: 5vh 0;
     margin-top: 10vh;
@@ -12,33 +12,33 @@
     gap: 5vh;
 }
 
-.mainContact h1 {
+main h1 {
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
     color: #0D0D0F;
 }
 
-.mainContact h2 {
+main h2 {
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
     color: #0D0D0F;
 }
 
-.mainContact p {
+main p {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 400;
     color: #0D0D0F;
 }
 
-.mainContact:first-child {
+main:first-child {
     display: flex;
     gap: 5vh;
 }
 
-.mainContact * {
+main * {
     display: flex;
     flex-direction: column;
     align-items: center;
