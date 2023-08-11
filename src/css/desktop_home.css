@@ -71,6 +71,8 @@
     font-size: 1.5rem;
     position: absolute;
 
+    letter-spacing: 0.1rem;
+
     transform: translate(-50%, -110%);
 
     color: #0D0D0F;
