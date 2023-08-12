@@ -101,3 +101,25 @@ html{
 
     pointer-events: none;
 }
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    height: 30vh;
+    width: 100vw;
+
+    padding: 2rem 0;
+
+    border-top: #E6E6EB 2px solid;
+}
+
+footer *{
+    text-align: center;
+    font-weight: lighter;
+}

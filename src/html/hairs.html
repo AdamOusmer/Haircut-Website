@@ -4,10 +4,306 @@
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light only">
     <title>Karine Styliste - Coiffure</title>
+
+    <!-- Main sheets -->
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/hamburger_menu.css">
+
+    <!-- Desktop sheet -->
+    <link rel="stylesheet" href="../css/hairs.css">
+    <!-- Mobile sheet: TODO Add it here when it's done-->
+
 </head>
 <body>
 
+    <!-- Cursor divs -->
+    <div class="cursorDot"></div>
+    <div class="cursorCircle"></div>
+
+    <!-- Menu Opened -->
+    <nav class="navigation menuInvisible">
+
+        <div class="imagesMenu">
+            <img class="imageMenu imgMenu1" draggable="false" src="../../image/logo.png" alt="">
+            <img class="imageMenu imgMenu2" draggable="false" src="../../image/logo.png" alt="">
+            <img class="imageMenu imgMenu3" draggable="false" src="../../image/logo.png" alt="">
+            <img class="imageMenu imgMenu4" draggable="false" src="../../image/logo.png" alt="">
+            <img class="imageMenu imgMenu5" draggable="false" src="../../image/logo.png" alt="">
+        </div>
+
+        <div class="links">
+
+            <a href="../../index.html" class="hovered"><h3>Accueil</h3></a>
+            <a href="about.html" class="hovered"><h3>À propos</h3></a>
+            <a href="hairs.html" class="hovered"><h3>Coiffure</h3></a>
+            <a href="" class="hovered"><h3>Esthétique</h3></a>
+            <a href="" class="hovered"><h3>Formation</h3></a>
+            <a href="contact.html" class="hovered"><h3>Contact</h3></a>
+
+        </div>
 
 
+        <div class="socialMedias-Wrapper">
+            <a href="https://www.facebook.com/karinestylistesalon" target="_blank" class="hovered"><img
+                    src="../../image/social-media/facebook.png" draggable="false" alt=""></a>
+            <a href="https://instagram.com/karinestylistesalon?igshid=YmMyMTA2M2Y=" target="_blank" class="hovered"><img
+                    src="../../image/social-media/instagram.png" draggable="false" alt=""></a>
+            <a href="https://www.tiktok.com/@karine_styliste?is_from_webapp=1&sender_device=pc" target="_blank"
+               class="hovered"><img
+                    src="../../image/social-media/tik-tok.png" draggable="false" alt=""></a>
+            <a href="https://www.youtube.com/@karinestyliste1689" target="_blank" class="hovered"><img
+                    src="../../image/social-media/youtube.png" draggable="false" alt=""></a>
+        </div>
+
+    </nav>
+
+    <!-- Hamburger menu components-->
+    <div class="menu hovered">
+
+        <label for="menu-checkbox"> <!-- Checkbox to track if the menu is opened or closed -->
+
+            <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+            <span class="menu-hit-box">
+                <span class="lines up-line"></span>
+                <span class="lines down-line"></span>
+            </span>
+
+        </label>
+
+    </div>
+
+    <main>
+
+        <section class="services">
+
+            <div class="menuServices">
+
+                <img src="../../image/logo.png" alt="">
+
+
+                <a href="" class="menuServicesLinks hovered">Coupes</a>
+                <a href="" class="menuServicesLinks hovered">Coloration</a>
+                <a href="" class="menuServicesLinks hovered">Pigmentation et Balayages</a>
+                <a href="" class="menuServicesLinks hovered">Mèches & Colorations Subtiles</a>
+                <a href="" class="menuServicesLinks hovered">Soins & Transformations Capillaire</a>
+
+                <pre><sup>*</sup>À partir de&Tab;**</sup>À la minute</pre>
+            </div>
+
+            <div class="servicesInsight">
+
+
+                <section class="cardsServices first">
+
+                    <table>
+
+                        <tr>
+                            <th>
+                                Coupes
+                            </th>
+                            <th colspan="2">Prix</th>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td><em>Sacha</em></td>
+                            <td><em>Karine</em></td>
+                        </tr>
+
+                        <tr>
+                            <td>Coupe</td>
+                            <td>25$</td>
+                            <td>33.50$</td>
+                        </tr>
+
+                        <tr>
+                            <td>C/bl</td>
+                            <td>40$</td>
+                            <td>50$</td>
+                        </tr>
+
+                        <tr>
+                            <td>Barbe</td>
+                            <td>7$</td>
+                            <td>11$</td>
+                        </tr>
+
+                        <tr>
+                            <td>Séchage Rapide</td>
+                            <td>5$<sup>*</sup></td>
+                            <td>5$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Bl</td>
+                            <td>20$<sup>*</sup></td>
+                            <td>25$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Texture au Fer</td>
+                            <td>5$<sup>*</sup></td>
+                            <td>11$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Updo</td>
+                            <td>45$<sup>*</sup></td>
+                            <td>60$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Traitements</td>
+                            <td>6$<sup>*</sup></td>
+                            <td>6$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Massage</td>
+                            <td>1.05$<sup>**</sup></td>
+                            <td>1.25$<sup>**</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Botox Capillaire</td>
+                            <td>70$</td>
+                            <td>75$</td>
+                        </tr>
+
+                    </table>
+
+                </section>
+
+                <section class="cardsServices second">
+
+                    <table>
+
+                        <tr>
+                            <th>
+                                Coloration
+                            </th>
+                            <th colspan="2">Prix</th>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td><em>Sacha</em></td>
+                            <td><em>Karine</em></td>
+                        </tr>
+
+                        <tr>
+                            <td>Repousse</td>
+                            <td>46</td>
+                            <td>56$</td>
+                        </tr>
+
+                        <tr>
+                            <td>Repousse - Produits en extra</td>
+                            <td colspan="2">21$ par tube</td>
+                        </tr>
+
+                        <tr>
+                            <td>Express (15 minutes)</td>
+                            <td>55$<sup>*</sup></td>
+                            <td>65$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Créative - Consultation requise</td>
+                            <td>60$<sup>*</sup></td>
+                            <td>75$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Créative - Produit en extra</td>
+                            <td colspan="2">26$ par tube</td>
+                        </tr>
+
+                        <tr>
+                            <td>Décoloration de Repousse</td>
+                            <td>58$<sup>*</sup></td>
+                            <td>68$<sup>*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>Décoloration de repousse - Produit en extra</td>
+                            <td colspan="2">15$ par 30 grammes</td>
+                        </tr>
+
+                        <tr>
+                            <td>Décoloration Complète</td>
+                            <td colspan="2">Consultation requise</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>Démaquillant (1 enveloppe)</td>
+                            <td>58$</td>
+                            <td>68$</td>
+                        </tr>
+
+                        <tr>
+                            <td>Enveloppe en extra</td>
+                            <td colspan="2">23$ par enveloppe</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>Nuanceur / toner</td>
+                            <td>21$<sup>*</sup></td>
+                            <td>26$<sup>*</sup></td>
+                        </tr>
+
+                    </table>
+
+                </section>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="menuFooter">
+
+            <a href="../../index.html" class="hovered"><h4>Accueil</h4></a>
+            <a href="about.html" class="hovered"><h4>À propos</h4></a>
+            <a href="hairs.html" class="hovered"><h4>Coiffure</h4></a>
+            <a href="" class="hovered"><h4>Esthétique</h4></a>
+            <a href="" class="hovered"><h4>Formation</h4></a>
+            <a href="contact.html" class="hovered"><h4>Contact</h4></a>
+
+        </div>
+
+        <div class="contactFooter">
+
+            <h4>Adresse :</h4>
+            <p>8405 Wilfrid-Pelletier</p>
+            <p>Montréal, Québec</p>
+            <p>H1K 1M3</p>
+
+            <h4>Téléphone :</h4>
+            <a href="tel:+15143524473" class="hovered">(514) 352-4473</a>
+
+        </div>
+
+
+        <div class="policyFooter">
+
+            <h4>Politique de confidentialité :</h4>
+            <pre>Nous ne collectons aucune donnée.<br/>&copy; 2023 Adam Ousmer</pre>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../javascript/general.js" defer></script>
+    <script src="../javascript/hair.js" defer></script>
 </body>
 </html>

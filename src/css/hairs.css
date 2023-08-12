@@ -1,0 +1,114 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main * {
+    color: #0D0D0F;
+}
+
+.services {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    flex-direction: row;
+
+    gap: 5vw;
+}
+
+.services img {
+    height: 40%;
+    width: auto;
+}
+
+.menuServices {
+    width: 25vw;
+    height: 78vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background: #E6E6EB;
+    border-radius: 50px;
+
+
+    padding: 2vh 0;
+
+    gap: 2rem;
+}
+
+.menuServicesLinks {
+    width: 85%;
+    height: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 96px;
+    background: #E6E6EB;
+    box-shadow: 9px 9px 17px #7c7c7f,
+    -9px -9px 17px #ffffff;
+
+}
+
+.servicesInsight {
+    width: 55vw;
+    height: 80vh;
+
+    border-radius: 50px;
+    background: #E6E6EB;
+}
+
+.servicesInsight section {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    align-items: center;
+}
+
+.servicesInsight section.first {
+    display: flex;
+}
+
+table {
+    width: 90%;
+    height: 90%;
+
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+tr, td, th {
+    text-align: center;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    font-size: 1.5rem;
+}
+
+th:first-child, td:first-child {
+    width: 70%; /* Adjust the width as needed */
+}
+
+sup {
+    font-weight: bold;
+}
+

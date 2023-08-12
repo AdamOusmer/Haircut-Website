@@ -1,5 +1,12 @@
 /* home page */
 
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .landing-image {
     position: relative;
     margin-top: 10vh;
@@ -175,6 +182,8 @@
 .card3 {
     background: url("../../image/cards_home/formation.jpeg") no-repeat center;
     background-size: cover;
+    filter: grayscale(100%) brightness(120%) contrast(110%)
+
 }
 
 .card3::after {
@@ -196,7 +205,7 @@
     border-radius: 50px;
 
     min-height: 75vh;
-    width: 100vw;
+    width: 95vw;
 
     background: #E6E6EB;
 }
@@ -283,22 +292,6 @@
     width: 70%;
 }
 
-/* footer */
-
-footer {
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: space-around;
-
-    height: 30vh;
-    width: 100vw;
-
-    padding: 2rem 0;
-}
-
-footer *{
-    text-align: center;
-    font-weight: lighter;
+footer{
+    margin-top: 2%;
 }
