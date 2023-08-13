@@ -78,7 +78,7 @@ main * {
     align-items: center;
 }
 
-.servicesInsight section.first {
+.servicesInsight section.active {
     display: flex;
 }
 
