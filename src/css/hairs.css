@@ -20,8 +20,10 @@ section.collections {
 
 section.collections h1 {
     font-size: 3.5rem;
-    text-align: center;
+    text-align: left;
     color: #0D0D0F;
+
+    margin-left: 5vw;
 }
 
 .circleAnimation {

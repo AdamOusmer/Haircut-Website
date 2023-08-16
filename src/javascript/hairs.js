@@ -25,6 +25,9 @@ const nextButton = document.querySelector('.next');
 const previousButton = document.querySelector('.previous');
 const rotationValue = (2 * Math.PI) / 3;
 
+// TODO: change image when click on next or previous button
+// TODO: add constant with the reference for the a tag and the img tag
+
 let rotationAngle = 0; // Initial rotation angle
 
 
