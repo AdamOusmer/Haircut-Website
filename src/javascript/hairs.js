@@ -34,10 +34,10 @@ let indexActiveCard = 0;
 let indexCurrentCardDisplayed = 0;
 
 
-const cardsImages = ['../../image/collectionsHairs/ballerina/ballerina.jpg', '../../image/collectionsHairs/ballerina/ballerina2.JPG', '../../image/collectionsHairs/ballerina/ballerina3.JPG', '../../image/collectionsHairs/ballerina/ballerina4.JPG']
-const cardsLinks = ['#', '#']
-const cardsShowingImages = [document.querySelector('.card1 a img'), document.querySelector('.card2 a img'), document.querySelector('.card3 a img')]
-const cardsShowingLinks = [document.querySelector('.card3 a'), document.querySelector('.card2 a'), document.querySelector('.card1 a')]
+const cardsImages = ['../../image/collectionsHairs/ballerina/ballerina.jpg', '../../image/collectionsHairs/ballerina/ballerina1.JPG', '../../image/collectionsHairs/ballerina/ballerina2.JPG', '../../image/collectionsHairs/ballerina/ballerina3.JPG', '../../image/collectionsHairs/ballerina/ballerina4.JPG'];
+const cardsLinks = ['collections/ballerina.html', '#', '#', '#', '#'];
+const cardsShowingImages = [document.querySelector('.card1 a img'), document.querySelector('.card2 a img'), document.querySelector('.card3 a img')];
+const cardsShowingLinks = [document.querySelector('.card1 a'), document.querySelector('.card2 a'), document.querySelector('.card3 a')];
 
 function changeCardCollection(movement) {
 
@@ -45,19 +45,18 @@ function changeCardCollection(movement) {
         indexActiveCard = indexActiveCard === cardsShowingImages.length - 1 ? 0 : indexActiveCard + 1;
 
         indexCurrentCardDisplayed = indexCurrentCardDisplayed === cardsImages.length - 1 ? 0 : indexCurrentCardDisplayed + 1;
-        console.log(cardsImages[indexActiveCard])
 
-        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed])
-
+        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
+        cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
     }
 
     if (movement === "previous") {
         indexActiveCard = indexActiveCard === 0 ? cardsShowingImages.length - 1 : indexActiveCard - 1;
 
-        indexCurrentCardDisplayed = indexCurrentCardDisplayed === 1 ? cardsImages.length - 1 : indexCurrentCardDisplayed - 1; // TODO select the right card
-        console.log(cardsImages[indexActiveCard])
+        indexCurrentCardDisplayed = indexCurrentCardDisplayed === 0 ? cardsImages.length - 1 : indexCurrentCardDisplayed - 1;
 
-        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed])
+        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
+        cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
 
     }
 
@@ -67,12 +66,12 @@ function changeCardCollection(movement) {
 nextButton.addEventListener('click', () => {
     rotationAngle -= rotationValue; // Decrease the rotation angle by 45 degrees
 
-    changeCardCollection("next")
+    changeCardCollection("next");
 
-    cards.animate(
+    const animation = cards.animate(
         [
-            {transform: `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)`},
-            {transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)`}
+            { transform: `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)` },
+            { transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)` }
         ],
         {
             duration: 600, // Animation duration in milliseconds
@@ -81,9 +80,11 @@ nextButton.addEventListener('click', () => {
         }
     );
 
-    cards.style.transform = `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)`
-
+    animation.onfinish = () => {
+        cards.style.transform = `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)`;
+    };
 });
+
 
 previousButton.addEventListener('click', () => {
     rotationAngle += rotationValue; // Decrease the rotation angle by 45 degrees
@@ -103,7 +104,7 @@ previousButton.addEventListener('click', () => {
         }
     );
 
-    cards.style.transform = `translate(-50%, 0%) rotate(${rotationAngle - rotationValue}rad)`
+    cards.style.transform = `translate(-50%, 0%) rotate(${rotationAngle - rotationValue}rad)`;
 
 });
 
