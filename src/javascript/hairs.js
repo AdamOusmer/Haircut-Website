@@ -30,14 +30,49 @@ const rotationValue = (2 * Math.PI) / 3;
 
 let rotationAngle = 0; // Initial rotation angle
 
+let indexActiveCard = 0;
+let indexCurrentCardDisplayed = 0;
+
+
+const cardsImages = ['../../image/collectionsHairs/ballerina/ballerina.jpg', '../../image/collectionsHairs/ballerina/ballerina2.JPG', '../../image/collectionsHairs/ballerina/ballerina3.JPG', '../../image/collectionsHairs/ballerina/ballerina4.JPG']
+const cardsLinks = ['#', '#']
+const cardsShowingImages = [document.querySelector('.card1 a img'), document.querySelector('.card2 a img'), document.querySelector('.card3 a img')]
+const cardsShowingLinks = [document.querySelector('.card3 a'), document.querySelector('.card2 a'), document.querySelector('.card1 a')]
+
+function changeCardCollection(movement) {
+
+    if (movement === "next") {
+        indexActiveCard = indexActiveCard === cardsShowingImages.length - 1 ? 0 : indexActiveCard + 1;
+
+        indexCurrentCardDisplayed = indexCurrentCardDisplayed === cardsImages.length - 1 ? 0 : indexCurrentCardDisplayed + 1;
+        console.log(cardsImages[indexActiveCard])
+
+        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed])
+
+    }
+
+    if (movement === "previous") {
+        indexActiveCard = indexActiveCard === 0 ? cardsShowingImages.length - 1 : indexActiveCard - 1;
+
+        indexCurrentCardDisplayed = indexCurrentCardDisplayed === 1 ? cardsImages.length - 1 : indexCurrentCardDisplayed - 1; // TODO select the right card
+        console.log(cardsImages[indexActiveCard])
+
+        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed])
+
+    }
+
+
+}
 
 nextButton.addEventListener('click', () => {
     rotationAngle -= rotationValue; // Decrease the rotation angle by 45 degrees
 
+    changeCardCollection("next")
+
     cards.animate(
         [
-            { transform: `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)` },
-            { transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)` }
+            {transform: `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)`},
+            {transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)`}
         ],
         {
             duration: 600, // Animation duration in milliseconds
@@ -53,10 +88,13 @@ nextButton.addEventListener('click', () => {
 previousButton.addEventListener('click', () => {
     rotationAngle += rotationValue; // Decrease the rotation angle by 45 degrees
 
+    changeCardCollection("previous")
+
+
     cards.animate(
         [
-            { transform: `translate(-50%, 0%) rotate(${rotationAngle - rotationValue}rad)` },
-            { transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)` }
+            {transform: `translate(-50%, 0%) rotate(${rotationAngle - rotationValue}rad)`},
+            {transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)`}
         ],
         {
             duration: 600, // Animation duration in milliseconds
