@@ -127,3 +127,17 @@ function animateLogo() {
 }
 
 animateLogo()
+
+
+// Name of the window when the page visibility changes
+
+let title = document.title;
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        document.title = title;
+    }
+    else {
+        title = document.title;
+        document.title = 'Karine Styliste Salon';
+    }
+});

@@ -21,8 +21,8 @@ function changeCard(index) {
 }
 
 const cards = document.querySelector('.cards');
-const nextButton = document.querySelector('.next');
-const previousButton = document.querySelector('.previous');
+const nextButton = document.getElementById('nextCollections');
+const previousButton = document.getElementById('previousCollections')
 const rotationValue = (2 * Math.PI) / 3;
 
 // TODO: change image when click on next or previous button
@@ -70,8 +70,8 @@ nextButton.addEventListener('click', () => {
 
     const animation = cards.animate(
         [
-            { transform: `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)` },
-            { transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)` }
+            {transform: `translate(-50%, 0%) rotate(${rotationAngle + rotationValue}rad)`},
+            {transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)`}
         ],
         {
             duration: 600, // Animation duration in milliseconds
@@ -108,3 +108,15 @@ previousButton.addEventListener('click', () => {
 
 });
 
+// Portfolio
+const nextKarine = document.getElementById("nextPortfolioKarine");
+const portfolioKarine = document.getElementById("list-Karine")
+
+function scrollPortfolio(element) {
+    element.scrollIntoView({behavior: "smooth"});
+    console.log(element.offsetWidth)
+    console.log(element.offsetLeft)
+
+}
+
+nextKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine);} );
