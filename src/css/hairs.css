@@ -16,7 +16,7 @@ section.collections {
     overflow: hidden;
 
     border-radius: 50px 50px 0 0;
-    height: 90vh;
+    height: clamp(700px, 90vh, 90vh);
     width: 100%;
 
     background: #E6E6EB;
@@ -87,8 +87,8 @@ section.collections h1 {
 }
 
 .buttons button {
-    width: 5vw;
-    height: 5vw;
+    width: clamp(50px, 5vw, 5vw);
+    height: clamp(50px, 5vw, 5vw);
 
     display: flex;
     align-items: center;
@@ -224,8 +224,11 @@ section.collections h1 {
     align-items: center;
     flex-direction: column;
 
-    height: 90vh;
+    height: clamp(600px, 90vh, 90vh);
+
     width: 100%;
+
+
 
     background: #E6E6EB;
     border-radius: 50px;
@@ -242,15 +245,16 @@ section.portfolio h1 {
 
 .portfolio ul{
     width: 80%;
-    padding: 20px 0;
+    height: 400px;
+    padding: 20px;
 
     overflow-x: scroll;
 
     display: inline-grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc(100% / 4);
+    grid-auto-columns: calc(100% / 4); /* TODO change this value in the screen size to make it responsive */
 
-    gap: 3vw;
+    gap: 20px;
 }
 
 .portfolio ul li{
@@ -268,7 +272,7 @@ section.portfolio h1 {
 }
 
 .services {
-    height: 100vh;
+    height: clamp(800px, 90vh, 90vh);
     width: 100%;
 
     display: flex;
@@ -288,7 +292,7 @@ section.portfolio h1 {
 
 .menuServices {
     width: 25vw;
-    height: 78vh;
+    height: 78%;
 
     display: flex;
     align-items: center;
@@ -323,7 +327,7 @@ section.portfolio h1 {
 
 .servicesInsight {
     width: 55vw;
-    height: 80vh;
+    height: 80%;
 
     border-radius: 50px;
     background: #E6E6EB;

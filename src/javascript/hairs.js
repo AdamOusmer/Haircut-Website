@@ -110,13 +110,36 @@ previousButton.addEventListener('click', () => {
 
 // Portfolio
 const nextKarine = document.getElementById("nextPortfolioKarine");
+const previousKarine = document.getElementById("previousPortfolioKarine");
 const portfolioKarine = document.getElementById("list-Karine")
 
-function scrollPortfolio(element) {
-    element.scrollIntoView({behavior: "smooth"});
-    console.log(element.offsetWidth)
-    console.log(element.offsetLeft)
+const nextSacha = document.getElementById("nextPortfolioSacha");
+const previousSacha = document.getElementById("previousPortfolioSacha");
+const portfolioSacha = document.getElementById("list-Sacha")
+
+function scrollPortfolio(element, direction) {
+
+    let scrollAmount = 0;
+    let totalScrollAmount = 300; // Adjust the total scroll distance
+
+    let frames = 60; // Adjust the total number of frames
+    let scrollPerFrame = totalScrollAmount / frames;
+
+    let slideTimer = setInterval(function(){
+
+        element.scrollLeft += direction ? scrollPerFrame : -scrollPerFrame;
+
+        scrollAmount += scrollPerFrame;
+        if(scrollAmount >= totalScrollAmount){
+            clearInterval(slideTimer);
+        }
+    }, 5); // Adjust the interval duration for smoother animation
 
 }
 
-nextKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine);} );
+
+nextKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine, true);} );
+previousKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine, false);} );
+
+nextSacha.addEventListener("click", function(){scrollPortfolio(portfolioSacha, true);} );
+previousSacha.addEventListener("click", function(){scrollPortfolio(portfolioSacha, false);} );
