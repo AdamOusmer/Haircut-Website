@@ -25,9 +25,6 @@ const nextButton = document.getElementById('nextCollections');
 const previousButton = document.getElementById('previousCollections')
 const rotationValue = (2 * Math.PI) / 3;
 
-// TODO: change image when click on next or previous button
-// TODO: add constant with the reference for the a tag and the img tag
-
 let rotationAngle = 0; // Initial rotation angle
 
 let indexActiveCard = 0;
@@ -133,7 +130,7 @@ function scrollPortfolio(element, direction) {
         if(scrollAmount >= totalScrollAmount){
             clearInterval(slideTimer);
         }
-    }, 5); // Adjust the interval duration for smoother animation
+    }, 1); // Adjust the interval duration for smoother animation
 
 }
 
