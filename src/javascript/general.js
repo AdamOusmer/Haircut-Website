@@ -64,6 +64,8 @@ hoveredElements.forEach((element) => {
 const checkbox = document.querySelector('#menu-checkbox');
 const menu = document.querySelector('.navigation');
 
+
+
 checkbox.addEventListener('change', async() => {
     if (checkbox.checked) {
         menu.classList.add('menuVisible');
@@ -141,3 +143,26 @@ document.addEventListener('visibilitychange', () => {
         document.title = 'Karine Styliste Salon';
     }
 });
+
+
+function scrollPortfolio(element, direction) {
+
+    let scrollAmount = 0;
+    let totalScrollAmount = 300; // Adjust the total scroll distance
+
+    let frames = 60; // Adjust the total number of frames
+    let scrollPerFrame = totalScrollAmount / frames;
+
+    let slideTimer = setInterval(function(){
+
+        element.scrollLeft += direction ? scrollPerFrame : -scrollPerFrame;
+
+        scrollAmount += scrollPerFrame;
+        if(scrollAmount >= totalScrollAmount){
+            clearInterval(slideTimer);
+        }
+    }, 1); // Adjust the interval duration for smoother animation
+
+}
+
+

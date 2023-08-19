@@ -38,7 +38,7 @@ const cardsShowingLinks = [document.querySelector('.card1 a'), document.querySel
 
 function changeCardCollection(movement) {
 
-    if (movement) {
+    if (movement === "next") {
         indexActiveCard = indexActiveCard === cardsShowingImages.length - 1 ? 0 : indexActiveCard + 1;
 
         indexCurrentCardDisplayed = indexCurrentCardDisplayed === cardsImages.length - 1 ? 0 : indexCurrentCardDisplayed + 1;
@@ -47,7 +47,7 @@ function changeCardCollection(movement) {
         cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
     }
 
-    else {
+    if (movement === "previous") {
         indexActiveCard = indexActiveCard === 0 ? cardsShowingImages.length - 1 : indexActiveCard - 1;
 
         indexCurrentCardDisplayed = indexCurrentCardDisplayed === 0 ? cardsImages.length - 1 : indexCurrentCardDisplayed - 1;
@@ -63,7 +63,7 @@ function changeCardCollection(movement) {
 nextButton.addEventListener('click', () => {
     rotationAngle -= rotationValue; // Decrease the rotation angle by 45 degrees
 
-    changeCardCollection(true);
+    changeCardCollection("next");
 
     const animation = cards.animate(
         [
@@ -86,7 +86,7 @@ nextButton.addEventListener('click', () => {
 previousButton.addEventListener('click', () => {
     rotationAngle += rotationValue; // Decrease the rotation angle by 45 degrees
 
-    changeCardCollection(false)
+    changeCardCollection("previous")
 
 
     cards.animate(
@@ -105,18 +105,25 @@ previousButton.addEventListener('click', () => {
 
 });
 
-// Portfolio
-const nextKarine = document.getElementById("nextPortfolioKarine");
-const previousKarine = document.getElementById("previousPortfolioKarine");
-const portfolioKarine = document.getElementById("list-Karine")
-
-const nextSacha = document.getElementById("nextPortfolioSacha");
-const previousSacha = document.getElementById("previousPortfolioSacha");
-const portfolioSacha = document.getElementById("list-Sacha")
+const nextPenny = document.getElementById("nextPortfolioPenny");
+const previousPenny = document.getElementById("previousPortfolioPenny");
+const portfolioPenny = document.getElementById("list-Penny")
 
 
-nextKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine, true);} );
-previousKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine, false);} );
+nextPenny.addEventListener("click", function(){scrollPortfolio(portfolioPenny, true);} );
+previousPenny.addEventListener("click", function(){scrollPortfolio(portfolioPenny, false);} );
 
-nextSacha.addEventListener("click", function(){scrollPortfolio(portfolioSacha, true);} );
-previousSacha.addEventListener("click", function(){scrollPortfolio(portfolioSacha, false);} );
+
+
+// Adjust size of the logo for Safari and Chrome
+
+window.onload = function() {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+    const serviceImages = document.querySelector('.services.aesthetic img');
+
+        if (isSafari || isChrome) {
+            serviceImages.style.height = '20%';
+        }
+};

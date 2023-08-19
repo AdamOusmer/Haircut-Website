@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "Ortica Bold - Angular";
+    src: url("../../fonts/Ortica/OrticaAngular-Bold.woff2") format("woff2"),
+    url("../../fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Ortica Bold - Linear";
+    src: url("../../fonts/Ortica/OrticaLinear-Bold.woff2") format("woff2"),
+    url("../../fonts/Ortica/OrticaLinear-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Ortica Light";
+    src: url("../../fonts/Ortica/OrticaLinear-Light.woff2") format("woff2"),
+    url("../../fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Ortica";
+    src: url("../../fonts/Ortica/OrticaLinear-Regular.woff2") format("woff2"),
+    url("../../fonts/Ortica/OrticaLinear-Regular.woff") format("woff");
+}
+
 *{
     cursor: none;
 
@@ -38,29 +62,7 @@ html{
 
 
 
-@font-face {
-    font-family: "Ortica Bold - Angular";
-    src: url("../../fonts/Ortica/OrticaAngular-Bold.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
-}
 
-@font-face {
-    font-family: "Ortica Bold - Linear";
-    src: url("../../fonts/Ortica/OrticaLinear-Bold.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaLinear-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Ortica Light";
-    src: url("../../fonts/Ortica/OrticaLinear-Light.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Ortica";
-    src: url("../../fonts/Ortica/OrticaLinear-Regular.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaLinear-Regular.woff") format("woff");
-}
 
 /* TODO add cursorDot effect with viewport of a computer */
 
@@ -117,6 +119,8 @@ footer {
     width: 100vw;
 
     padding: 2rem 0;
+
+    margin-top: 20px;
 
     border-top: #E6E6EB 2px solid;
 }

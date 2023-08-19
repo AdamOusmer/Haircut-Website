@@ -119,8 +119,8 @@ section.collections h1 {
     position: absolute;
 
     left: 50%;
-    top: 25%;
-    transform: rotate(0) translate(-50%, 0);
+    top: 100%;
+    transform: rotate(0) translate(-50%, -50%);
 
     display: flex;
     align-items: center;
@@ -175,7 +175,7 @@ section.collections h1 {
     -9px -9px 17px #ffffff;
 }
 
-.divider{
+.divider {
     top: 25%;
     left: 50%;
 
@@ -227,7 +227,6 @@ section.collections h1 {
     width: 100%;
 
 
-
     background: #E6E6EB;
     border-radius: 50px;
 }
@@ -241,7 +240,7 @@ section.portfolio h1 {
     margin-left: 5vw;
 }
 
-.portfolio ul{
+.portfolio ul {
     width: 80%;
     height: 400px;
     padding: 20px;
@@ -255,11 +254,11 @@ section.portfolio h1 {
     gap: 20px;
 }
 
-.portfolio ul li{
+.portfolio ul li {
     list-style: none;
 }
 
-.portfolio ul li img{
+.portfolio ul li img {
     width: auto;
     height: 350px;
     object-fit: cover;
@@ -288,6 +287,7 @@ section.portfolio h1 {
     width: auto;
 }
 
+
 .menuServices {
     width: 25vw;
     height: 78%;
@@ -303,18 +303,20 @@ section.portfolio h1 {
 
     padding: 2vh 0;
 
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .menuServicesLinks {
     width: 85%;
-    height: 8%;
+    height: 10%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
+
+    padding: 0.25rem;
 
     border-radius: 96px;
     background: #E6E6EB;
@@ -367,6 +369,11 @@ th {
 
 th:first-child, td:first-child {
     width: 70%; /* Adjust the width as needed */
+}
+
+
+th.aesthetic:first-child, td:first-child {
+    width: 80%; /* Adjust the width as needed */
 }
 
 sup {
