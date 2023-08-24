@@ -40,22 +40,18 @@ function changeCardCollection(movement) {
 
     if (movement === "next") {
         indexActiveCard = indexActiveCard === cardsShowingImages.length - 1 ? 0 : indexActiveCard + 1;
-
         indexCurrentCardDisplayed = indexCurrentCardDisplayed === cardsImages.length - 1 ? 0 : indexCurrentCardDisplayed + 1;
 
-        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
-        cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
     }
 
     if (movement === "previous") {
         indexActiveCard = indexActiveCard === 0 ? cardsShowingImages.length - 1 : indexActiveCard - 1;
-
         indexCurrentCardDisplayed = indexCurrentCardDisplayed === 0 ? cardsImages.length - 1 : indexCurrentCardDisplayed - 1;
 
-        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
-        cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
-
     }
+
+    cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
+    cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
 
 
 }
@@ -91,8 +87,8 @@ previousButton.addEventListener('click', () => {
 
     cards.animate(
         [
-            {transform: `translate(-50%, 0%) rotate(${rotationAngle - rotationValue}rad)`},
-            {transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)`}
+            {transform: `translate(-50%, -50%) rotate(${rotationAngle - rotationValue}rad)`},
+            {transform: `translate(-50%, -50%) rotate(${rotationAngle}rad)`}
         ],
         {
             duration: 600, // Animation duration in milliseconds
@@ -101,7 +97,7 @@ previousButton.addEventListener('click', () => {
         }
     );
 
-    cards.style.transform = `translate(-50%, 0%) rotate(${rotationAngle - rotationValue}rad)`;
+    cards.style.transform = `translate(-50%, -50%) rotate(${rotationAngle - rotationValue}rad)`;
 
 });
 
@@ -110,20 +106,22 @@ const previousPenny = document.getElementById("previousPortfolioPenny");
 const portfolioPenny = document.getElementById("list-Penny")
 
 
-nextPenny.addEventListener("click", function(){scrollPortfolio(portfolioPenny, true);} );
-previousPenny.addEventListener("click", function(){scrollPortfolio(portfolioPenny, false);} );
-
+nextPenny.addEventListener("click", function () {
+    scrollPortfolio(portfolioPenny, true);
+});
+previousPenny.addEventListener("click", function () {
+    scrollPortfolio(portfolioPenny, false);
+});
 
 
 // Adjust size of the logo for Safari and Chrome
 
-window.onload = function() {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+window.onload = function () {
+    const isWebkit = /^((?!chrome|android).)*safari/i.test(navigator.userAgent) || /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
     const serviceImages = document.querySelector('.services.aesthetic img');
 
-        if (isSafari || isChrome) {
-            serviceImages.style.height = '20%';
-        }
+    if (isWebkit) {
+        serviceImages.style.height = '20%';
+    }
 };

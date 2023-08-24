@@ -37,18 +37,18 @@ section {
 }
 
 .karine {
-    background: url("../../image/cards_home/Karine.jpeg") no-repeat center;
+    background: url("../../../image/cards_home/Karine.jpeg") no-repeat center;
     background-size: cover;
 }
 
 .penny {
-    background: url("../../image/cardAbout/penny.jpg") no-repeat center;
+    background: url("../../../image/cardAbout/penny.jpg") no-repeat center;
     background-size: cover;
     filter: grayscale(100%) brightness(120%) contrast(110%)
 }
 
 .sacha {
-    background: url("../../image/cardAbout/sacha.jpg") no-repeat center;
+    background: url("../../../image/cardAbout/sacha.jpg") no-repeat center;
     background-size: cover;
     filter: grayscale(100%) brightness(100%) contrast(110%);
 }

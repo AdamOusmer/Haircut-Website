@@ -40,23 +40,14 @@ function changeCardCollection(movement) {
 
     if (movement) {
         indexActiveCard = indexActiveCard === cardsShowingImages.length - 1 ? 0 : indexActiveCard + 1;
-
         indexCurrentCardDisplayed = indexCurrentCardDisplayed === cardsImages.length - 1 ? 0 : indexCurrentCardDisplayed + 1;
-
-        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
-        cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
-    }
-
-    else {
+    } else {
         indexActiveCard = indexActiveCard === 0 ? cardsShowingImages.length - 1 : indexActiveCard - 1;
-
         indexCurrentCardDisplayed = indexCurrentCardDisplayed === 0 ? cardsImages.length - 1 : indexCurrentCardDisplayed - 1;
-
-        cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
-        cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
-
     }
 
+    cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
+    cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
 
 }
 
@@ -115,8 +106,16 @@ const previousSacha = document.getElementById("previousPortfolioSacha");
 const portfolioSacha = document.getElementById("list-Sacha")
 
 
-nextKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine, true);} );
-previousKarine.addEventListener("click", function(){scrollPortfolio(portfolioKarine, false);} );
+nextKarine.addEventListener("click", function () {
+    scrollPortfolio(portfolioKarine, true);
+});
+previousKarine.addEventListener("click", function () {
+    scrollPortfolio(portfolioKarine, false);
+});
 
-nextSacha.addEventListener("click", function(){scrollPortfolio(portfolioSacha, true);} );
-previousSacha.addEventListener("click", function(){scrollPortfolio(portfolioSacha, false);} );
+nextSacha.addEventListener("click", function () {
+    scrollPortfolio(portfolioSacha, true);
+});
+previousSacha.addEventListener("click", function () {
+    scrollPortfolio(portfolioSacha, false);
+});
