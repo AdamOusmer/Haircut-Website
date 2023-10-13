@@ -1,0 +1,232 @@
+.menu {
+
+    position: fixed;
+
+
+    top: 5vh;
+    left: 90vw;
+
+    z-index: 1000;
+    background: transparent;
+    mix-blend-mode: difference;
+
+}
+
+.menu * {
+    background: transparent;
+}
+
+/* Menu opened layout */
+
+nav {
+    position: fixed;
+
+
+    background: #E6E7FF77;
+    opacity: 0.95;
+
+    top: -100%;
+
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menuInvisible {
+    display: none;
+    visibility: hidden;
+}
+
+.menuVisible {
+    display: block;
+    visibility: visible;
+
+    position: fixed;
+
+    z-index: 3;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #0D0D0F;
+}
+
+nav * {
+    user-select: none;
+}
+
+.imageMenu {
+    position: absolute;
+    display: block;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50vw;
+    height: auto;
+
+    opacity: 0.9;
+}
+
+.imgMenu1 {
+    -webkit-filter: grayscale(1) invert(0.2);
+    filter: grayscale(1) invert(0.2);
+}
+
+.imgMenu2 {
+    -webkit-filter: grayscale(1) invert(0.3);
+    filter: grayscale(1) invert(0.3);
+}
+
+.imgMenu3 {
+    -webkit-filter: grayscale(1) invert(0.4);
+    filter: grayscale(1) invert(0.4);
+}
+
+.imgMenu4 {
+    -webkit-filter: grayscale(1) invert(0.5);
+    filter: grayscale(1) invert(0.5);
+}
+
+.imgMenu5 {
+    -webkit-filter: grayscale(1) invert(0.8);
+    filter: grayscale(1) invert(0.8);
+}
+
+
+.link-wrapper {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100vw;
+    height: 80vh;
+}
+
+.socialMedias-Wrapper {
+    display: flex;
+
+    width: 60%;
+
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.socialMedias-Wrapper a img {
+    width: 3rem;
+    height: 3rem;
+
+    filter: grayscale(1) invert(1);
+}
+
+nav a {
+    font-size: 1.25rem;
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+nav a::before{
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 10px;
+    background-color: #EEF1EF;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+
+}
+
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.socialMedias-Wrapper a {
+    padding-bottom: 15px;
+}
+
+
+.links {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* Hamburger menu*/
+
+.up-line {
+    transform: translate(0, 0);
+}
+
+.down-line {
+    transform: translate(1rem, 0.7rem);
+}
+
+.lines {
+    display: inline-block;
+
+    position: fixed;
+
+    height: 0.25rem;
+    width: 4rem;
+    transition: 0.4s ease-in-out;
+
+    background: #E6E6EB;
+
+    mix-blend-mode: difference;
+
+}
+
+.menu-hit-box {
+    display: inline-block;
+
+    position: fixed;
+
+    height: 1rem;
+    width: 5rem;
+    mix-blend-mode: difference;
+}
+
+
+.menu-hit-box:hover, .menu-hit-box:hover * {
+    cursor: none;
+}
+
+.menu-hit-box:hover {
+    height: 1.2rem;
+}
+
+.menu-hit-box:hover .up-line {
+    transform: translate(0, -0.3rem);
+}
+
+.menu-hit-box:hover .down-line {
+    transform: translate(1rem, 1rem);
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-label {
+    font-size: 1.25rem;
+
+}
+

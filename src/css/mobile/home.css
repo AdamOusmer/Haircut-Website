@@ -3,6 +3,21 @@
         height: 90vh;
     }
 
+    .landing-overlay {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .scroll-arrow{
+        height: 5vh;
+
+    }
+
+    .scroll-arrow::before {
+        font-size: 3rem;
+    }
+
+
     .cards {
         flex-direction: column;
 
@@ -24,7 +39,7 @@
 
     .card::after{
         opacity: 0.7;
-        height: 50vh;
+        height: 100%;
     }
 
 
@@ -46,14 +61,13 @@
     }
 
     .about.left-element.a-wrapper {
-
-        width: 100vw;
-        gap: 0;
+        width: 30vw;
+        gap: 100vw;
     }
 
     .about.left-element.a-wrapper a {
 
-        width: 10%;
+        width: 20% ;
 
     }
 

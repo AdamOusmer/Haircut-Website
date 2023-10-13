@@ -82,8 +82,8 @@ previousButton.addEventListener('click', () => {
 
     cards.animate(
         [
-            {transform: `translate(-50%, 0%) rotate(${rotationAngle - rotationValue}rad)`},
-            {transform: `translate(-50%, 0%) rotate(${rotationAngle}rad)`}
+            {transform: `translate(-50%, -50%) rotate(${rotationAngle - rotationValue}rad)`},
+            {transform: `translate(-50%, -50%) rotate(${rotationAngle}rad)`}
         ],
         {
             duration: 600, // Animation duration in milliseconds

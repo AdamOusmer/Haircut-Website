@@ -1,92 +1,75 @@
 // Cursor
 
-// Variables Declaration
 const cursorDot = document.querySelector('.cursorDot');
 const cursorCircle = document.querySelector('.cursorCircle')
-let targetX = 0;
-let targetY = 0;
+
+
+// Variables Declaration
+
 let mouseHover = false; // Check if an element is hovered for the mouseup animation resizing
 let menuOpened = false;
 
+const userAgent = navigator.userAgent;
+let isTabletOrPhone = /tablet|ipad/i.test(userAgent) || /mobile|iphone|android/i.test(userAgent);
+
+
+let targetX = 0;
+let targetY = 0;
+
+if(!isTabletOrPhone) {
 // Tracker
-document.addEventListener('mousemove', e => {
-    targetX = e.clientX;
-    targetY = e.clientY;
-});
+    document.addEventListener('mousemove', e => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+    });
 
 // Click Event listener
-document.addEventListener('mousedown', () => {
-    cursorDot.style.border = '15px solid #E6E6EB';
-})
+    document.addEventListener('mousedown', () => {
+        cursorDot.style.border = '15px solid #E6E6EB';
+    })
 
-document.addEventListener('mouseup', () => {
-    if (mouseHover) {
-        cursorDot.style.border = '25px solid #E6E6EB';
-    }
+    document.addEventListener('mouseup', () => {
+        if (mouseHover) {
+            cursorDot.style.border = '25px solid #E6E6EB';
+        }
 
-    if (!mouseHover) {
-        cursorDot.style.border = '2px solid #E6E6EB';
-    }
-});
+        if (!mouseHover) {
+            cursorDot.style.border = '2px solid #E6E6EB';
+        }
+    });
 
 // Lag effect on the big circle and instant position update for the dot
-function updateCursor() {
+    function updateCursor() {
 
-    cursorDot.style.top = `${targetY}px`;
-    cursorDot.style.left = `${targetX}px`;
+        cursorDot.style.top = `${targetY}px`;
+        cursorDot.style.left = `${targetX}px`;
 
-    cursorCircle.animate({top: `${targetY}px`, left: `${targetX}px`}, {duration: 700, fill: 'forwards'})
+        cursorCircle.animate({top: `${targetY}px`, left: `${targetX}px`}, {duration: 700, fill: 'forwards'})
 
-    requestAnimationFrame(updateCursor);
-}
+        requestAnimationFrame(updateCursor);
+    }
 
-updateCursor();
+    updateCursor();
 
 
 // Add event listeners to hovered elements
-const hoveredElements = document.querySelectorAll('.hovered');
+    const hoveredElements = document.querySelectorAll('.hovered');
 
-hoveredElements.forEach((element) => {
-    element.addEventListener('mouseover', () => {
-        mouseHover = true;
-        cursorDot.style.border = '25px solid #E6E6EB';
+    hoveredElements.forEach((element) => {
+        element.addEventListener('mouseover', () => {
+            mouseHover = true;
+            cursorDot.style.border = '25px solid #E6E6EB';
+        });
+
+        element.addEventListener('mouseout', () => {
+            mouseHover = false;
+            cursorDot.style.border = '2px solid #E6E6EB';
+        });
     });
-
-    element.addEventListener('mouseout', () => {
-        mouseHover = false;
-        cursorDot.style.border = '2px solid #E6E6EB';
-    });
-});
-
-
-// Menu toggle
-
-const checkbox = document.querySelector('#menu-checkbox');
-const menu = document.querySelector('.navigation');
-
-
-
-checkbox.addEventListener('change', async() => {
-    if (checkbox.checked) {
-        menu.classList.add('menuVisible');
-        menu.classList.remove('menuInvisible')
-
-
-        await menu.animate( {top : '0'}, {duration: 600, easing: 'ease-in-out', fill: 'both'}).finished;
-
-        menuOpened = true;
-    } else {
-        await menu.animate( {top : '-100%'}, {duration: 600, easing: 'ease-in-out', fill: 'both'}).finished;
-
-        menu.classList.add('menuInvisible')
-        menu.classList.remove('menuVisible');
-
-
-
-        menuOpened = false;
-    }
-});
-
+}else{
+    cursorCircle.style.display = 'none';
+    cursorDot.style.display = 'none';
+}
 // menu Logo animation
 
 const menuLogo = Array.from(document.getElementsByClassName('imageMenu'));
@@ -102,15 +85,13 @@ function animateLogo() {
 
             if (x >= 0 && x < 50) {
                 x = -50 + x;
-            }
-            else if (x >= 50 && x < 100) {
+            } else if (x >= 50 && x < 100) {
                 x = x - 50;
             }
 
             if (y >= 0 && y < 50) {
                 y = -50 + y;
-            }
-            else if (y >= 50 && y < 100) {
+            } else if (y >= 50 && y < 100) {
                 y = y - 50;
             }
 
@@ -118,8 +99,8 @@ function animateLogo() {
             y = y * maxExtension[index] / 1000;
 
             logo.animate(
-                { transform: `translate(${x - 50}%, ${y - 50}%)` },
-                { duration: 1000, easing: 'ease-in-out', fill: 'both' }
+                {transform: `translate(${x - 50}%, ${y - 50}%)`},
+                {duration: 1000, easing: 'ease-in-out', fill: 'both'}
             );
 
         })
@@ -131,14 +112,39 @@ function animateLogo() {
 animateLogo()
 
 
+// Menu toggle
+
+const checkbox = document.querySelector('#menu-checkbox');
+const menu = document.querySelector('#nav');
+
+
+checkbox.addEventListener('change', async () => {
+    if (checkbox.checked) {
+        menu.classList.add('menuVisible');
+        menu.classList.remove('menuInvisible')
+
+
+        menu.animate({top: '0'}, {duration: 600, easing: 'ease-in-out', fill: 'both'}).finished;
+
+        menuOpened = true;
+    } else {
+        await menu.animate({top: '-100%'}, {duration: 600, easing: 'ease-in-out', fill: 'both'}).finished;
+
+        menu.classList.add('menuInvisible')
+        menu.classList.remove('menuVisible');
+
+
+        menuOpened = false;
+    }
+});
+
 // Name of the window when the page visibility changes
 
 let title = document.title;
 document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
         document.title = title;
-    }
-    else {
+    } else {
         title = document.title;
         document.title = 'Karine Styliste Salon';
     }
@@ -153,12 +159,12 @@ function scrollPortfolio(element, direction) {
     let frames = 60; // Adjust the total number of frames
     let scrollPerFrame = totalScrollAmount / frames;
 
-    let slideTimer = setInterval(function(){
+    let slideTimer = setInterval(function () {
 
         element.scrollLeft += direction ? scrollPerFrame : -scrollPerFrame;
 
         scrollAmount += scrollPerFrame;
-        if(scrollAmount >= totalScrollAmount){
+        if (scrollAmount >= totalScrollAmount) {
             clearInterval(slideTimer);
         }
     }, 1); // Adjust the interval duration for smoother animation
