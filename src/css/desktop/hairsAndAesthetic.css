@@ -20,13 +20,19 @@ section.collections {
     background: #E6E6EB;
 }
 
-section.collections h1 {
-    font-size: 3.5rem;
+.header_collections {
+    font-size: 2.5rem;
     text-align: left;
     color: #0D0D0F;
 
     margin-left: 5vw;
 }
+
+.header_collections h2{
+    font-size: 2rem;
+}
+
+
 
 .circleAnimation {
     position: absolute;
@@ -47,6 +53,12 @@ section.collections h1 {
 .circleAnimation::after, .empty::after {
     content: "";
     position: absolute;
+
+    display: flex;
+
+    text-align: center;
+    align-items: start;
+    justify-content: center;
 
     height: 220px;
     width: 220px;

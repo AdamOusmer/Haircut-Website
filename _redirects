@@ -1,6 +1,7 @@
-/index /accueil 301
+/index / 301
 
 /src/html/about /a-propos 301
 
-/contact /contactez-nous 301
+/src/html/contact /contactez-nous 301
 
+/src/html/collections/ballerina /collections/ballerina 301

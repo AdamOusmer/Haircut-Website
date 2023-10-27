@@ -33,8 +33,10 @@ let indexCurrentCardDisplayed = 0;
 
 const cardsImages = ['../../image/collectionsHairs/ballerina/ballerina.jpg', '../../image/collectionsHairs/ballerina/ballerina1.JPG', '../../image/collectionsHairs/ballerina/ballerina2.JPG', '../../image/collectionsHairs/ballerina/ballerina3.JPG', '../../image/collectionsHairs/ballerina/ballerina4.JPG'];
 const cardsLinks = ['collections/ballerina.html', '#', '#', '#', '#'];
+const namesCircleText = ["ballerina", "ballerina1", "ballerina2", "ballerina3", "ballerina4"];
 const cardsShowingImages = [document.querySelector('.card1 a img'), document.querySelector('.card2 a img'), document.querySelector('.card3 a img')];
 const cardsShowingLinks = [document.querySelector('.card1 a'), document.querySelector('.card2 a'), document.querySelector('.card3 a')];
+const circleText = document.querySelector('#collection_name');
 
 function changeCardCollection(movement) {
 
@@ -48,7 +50,8 @@ function changeCardCollection(movement) {
 
     cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
     cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
-
+    circleText.innerHTML = namesCircleText[indexCurrentCardDisplayed];
+    console.log(namesCircleText[indexCurrentCardDisplayed]);
 }
 
 nextButton.addEventListener('click', () => {
