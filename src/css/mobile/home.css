@@ -8,13 +8,8 @@
         height: clamp(150px, 90vw, 500px);
     }
 
-    .scroll-arrow{
-        height: 5vh;
-
-    }
-
-    .scroll-arrow::before {
-        font-size: 3rem;
+    .scroll-arrow {
+        display: none;
     }
 
 

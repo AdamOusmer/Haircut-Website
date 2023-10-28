@@ -37,8 +37,8 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    height: clamp(150px, 30vw, 500px);
-    width: clamp(150px, 30vw, 500px);
+    height: clamp(500px, 30vw, 1000px);
+    width: clamp(500px, 30vw, 1000px);
     z-index: 1;
     border-radius: 100%;
 
@@ -249,13 +249,140 @@ main {
     gap: 5vw;
 }
 
-.a-wrapper a{
-    text-decoration: none;
-    border-radius: 96px;
+@keyframes fill_the_button {
+
+to {
+    transform: scale(15);
+    opacity: 1;
+}
+
+}
+
+.buttons {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+
+    border-radius: 25px;
     background: #E6E6EB;
-    box-shadow:  9px 9px 17px #7c7c7f,
-    -9px -9px 17px #ffffff;
-    padding: 0.5rem 2rem;
+    box-shadow:  20px 20px 60px #9c9ca0,
+    -20px -20px 60px #ffffff;
+
+    overflow: hidden;
+
+    transition: 1000ms ease-in-out;
+}
+
+.buttons .circleAbout {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #9A638B;
+
+    opacity: 0;
+
+    z-index: 1;
+
+}
+
+.buttons:hover .circleAbout {
+    animation: fill_the_button 1000ms ease-in-out 900ms forwards;
+    animation-delay: 400ms;
+}
+
+.buttons pre {
+    z-index: 2;
+
+    font-size: 1.15rem;
+
+    text-align: center;
+}
+
+.buttons a{
+    z-index: 2;
+}
+
+.buttons:hover a{
+    color: #E6E6EB;
+}
+
+
+@keyframes  crossing_dot_before{
+
+    0%{
+        left: 110%;
+    }
+
+    100%{
+        left: 50%;
+    }
+
+}
+
+@keyframes  crossing_dot_after{
+
+    0%{
+        left: -10%;
+    }
+
+    100%{
+        left: 50%;
+    }
+
+}
+
+.buttons::before{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translate(-50%, -50%);
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;;
+
+    background: #9A638B;
+}
+
+
+.buttons::after{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;;
+
+    background: #9A638B;
+}
+
+.buttons:hover::before{
+    animation: crossing_dot_before 700ms ease-in-out;
+}
+
+.buttons:hover::after{
+    animation: crossing_dot_after 700ms ease-in-out;
 }
 
 .about h1{
