@@ -89,6 +89,7 @@ nav * {
 .imgMenu5 {
     -webkit-filter: grayscale(1) invert(0.8);
     filter: grayscale(1) invert(0.8);
+    opacity: 0.8;
 }
 
 
@@ -161,6 +162,9 @@ nav a:hover::before {
     padding-bottom: 15px;
 }
 
+.socialMedias-Wrapper a:hover img{
+    filter: invert(53%) sepia(6%) saturate(2593%) hue-rotate(264deg) brightness(81%) contrast(86%);
+}
 
 .links {
     display: flex;

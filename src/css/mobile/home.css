@@ -4,8 +4,8 @@
     }
 
     .landing-overlay {
-        width: 90vw;
-        height: 90vw;
+        width: clamp(150px, 90vw, 500px);
+        height: clamp(150px, 90vw, 500px);
     }
 
     .scroll-arrow{

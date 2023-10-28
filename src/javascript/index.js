@@ -111,7 +111,6 @@ function animateLogo() {
 
 animateLogo()
 
-
 // Menu toggle
 
 const checkbox = document.querySelector('#menu-checkbox');
@@ -156,7 +155,7 @@ function scrollPortfolio(element, direction) {
     let scrollAmount = 0;
     let totalScrollAmount = 300; // Adjust the total scroll distance
 
-    let frames = 60; // Adjust the total number of frames
+    let frames = 90; // Adjust the total number of frames
     let scrollPerFrame = totalScrollAmount / frames;
 
     let slideTimer = setInterval(function () {
@@ -170,5 +169,6 @@ function scrollPortfolio(element, direction) {
     }, 1); // Adjust the interval duration for smoother animation
 
 }
+
 
 
