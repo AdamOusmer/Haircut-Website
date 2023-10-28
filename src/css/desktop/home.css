@@ -11,7 +11,7 @@ main {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("../../../image/home.png");
+    background-image: url("../../../assets/image/home.png");
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -31,14 +31,14 @@ main {
 
 .landing-overlay {
     position: absolute;
-    background: #E6E7FF77 url("../../../image/logo.png") center/cover no-repeat;
+    background: #E6E7FF77 url("../../../assets/image/logo.png") center/cover no-repeat;
 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    height: 30rem;
-    width: 30rem;
+    height: clamp(150px, 30vw, 500px);
+    width: clamp(150px, 30vw, 500px);
     z-index: 1;
     border-radius: 100%;
 
@@ -154,7 +154,7 @@ main {
 }
 
 .card1 {
-    background: url("../../../image/cards_home/penny.jpg") no-repeat center;
+    background: url("../../../assets/image/cards_home/penny.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -168,22 +168,22 @@ main {
 
 .card1::after {
     content: "";
-    background: url("../../../image/cards_home/penny_logo.PNG") #E6E6EB99 no-repeat center;
+    background: url("../../../assets/image/cards_home/penny_logo.PNG") #E6E6EB99 no-repeat center;
     background-size: contain;
 }
 
 .card2 {
-    background: url("../../../image/cards_home/Karine.jpeg") no-repeat center;
+    background: url("../../../assets/image/cards_home/Karine.jpeg") no-repeat center;
     background-size: cover;
 }
 
 .card2::after {
-    background: url("../../../image/logo.png") #E6E6EB99 no-repeat center;
+    background: url("../../../assets/image/logo.png") #E6E6EB99 no-repeat center;
     background-size: contain;
 }
 
 .card3 {
-    background: url("../../../image/cards_home/formation.jpeg") #E6E6EB99 no-repeat center;
+    background: url("../../../assets/image/cards_home/formation.jpeg") #E6E6EB99 no-repeat center;
     background-size: cover;
     filter: grayscale(100%) brightness(120%) contrast(110%)
 
@@ -191,7 +191,7 @@ main {
 
 .card3::after {
     /* TODO add the correct logo for the formation card*/
-    background: url("../../../image/logo.png") #E6E6EB99 no-repeat center;
+    background: url("../../../assets/image/logo.png") #E6E6EB99 no-repeat center;
     background-size: contain;
 }
 

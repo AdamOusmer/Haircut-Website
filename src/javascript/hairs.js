@@ -31,12 +31,16 @@ let indexActiveCard = 0;
 let indexCurrentCardDisplayed = 0;
 
 
-const cardsImages = ['../../image/collectionsHairs/ballerina/ballerina.jpg', '../../image/collectionsHairs/ballerina/ballerina1.JPG', '../../image/collectionsHairs/ballerina/ballerina2.JPG', '../../image/collectionsHairs/ballerina/ballerina3.JPG', '../../image/collectionsHairs/ballerina/ballerina4.JPG'];
+const cardsImages = ['../../assets/image/collectionsHairs/ballerina/ballerina.jpg', '../../assets/image/collectionsHairs/ice_queen/ice1.JPG', '../../assets/image/collectionsHairs/ballerina/ballerina2.JPG', '../../assets/image/collectionsHairs/ballerina/ballerina3.JPG', '../../assets/image/collectionsHairs/ballerina/ballerina4.JPG'];
 const cardsLinks = ['collections/ballerina.html', '#', '#', '#', '#'];
-const namesCircleText = ["ballerina", "ballerina1", "ballerina2", "ballerina3", "ballerina4"];
+const names_collection = ["Ballerina", "Ice Queen", "Ballerina2", "ballerina3", "ballerina4"];
+const background = ['#0B0D10', '#c2d1e1', '#0B0D10', '#0B0D10', '#0B0D10']
+const colors = ['#E6E6EB', '#0B0D10', '#E6E6EB', '#E6E6EB', '#E6E6EB']
 const cardsShowingImages = [document.querySelector('.card1 a img'), document.querySelector('.card2 a img'), document.querySelector('.card3 a img')];
 const cardsShowingLinks = [document.querySelector('.card1 a'), document.querySelector('.card2 a'), document.querySelector('.card3 a')];
-const circleText = document.querySelector('#collection_name');
+const name_collection = document.querySelector('#collection_name');
+const section = document.querySelector('.collections')
+const text_collection = document.querySelectorAll('.text_collection')
 
 function changeCardCollection(movement) {
 
@@ -50,8 +54,11 @@ function changeCardCollection(movement) {
 
     cardsShowingImages[indexActiveCard].setAttribute('src', cardsImages[indexCurrentCardDisplayed]);
     cardsShowingLinks[indexActiveCard].setAttribute('href', cardsLinks[indexCurrentCardDisplayed]);
-    circleText.innerHTML = namesCircleText[indexCurrentCardDisplayed];
-    console.log(namesCircleText[indexCurrentCardDisplayed]);
+    name_collection.innerHTML = names_collection[indexCurrentCardDisplayed];
+    section.style.background = background[indexCurrentCardDisplayed];
+    text_collection.forEach((text) => {
+        text.style.color = colors[indexCurrentCardDisplayed];
+    });
 }
 
 nextButton.addEventListener('click', () => {

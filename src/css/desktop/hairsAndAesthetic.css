@@ -17,22 +17,44 @@ section.collections {
     height: clamp(700px, 100vh, 100vh);
     width: 100%;
 
-    background: #E6E6EB;
+    background: #0D0D0F;
+
+    transition: 600ms ease;
 }
+
 
 .header_collections {
     font-size: 2.5rem;
     text-align: left;
-    color: #0D0D0F;
+    color: #E6E6EB;
 
     margin-left: 5vw;
+
+    transition: 600ms ease;
 }
 
-.header_collections h2{
-    font-size: 2rem;
+.header_collections * {
+    color: #E6E6EB;
 }
 
+.header_collections h2 {
+    font-size: 2.5rem;
+}
 
+.click_me {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+
+
+    transform: translate(-50%, -60%);
+
+    z-index: 100;
+}
+
+.click_me a {
+    color: #E6E6EB;
+}
 
 .circleAnimation {
     position: absolute;
@@ -42,8 +64,6 @@ section.collections {
     border-radius: 50%;
 
     background: #E6E6EB;
-    box-shadow: 9px 9px 17px #7c7c7f,
-    -9px -9px 17px #ffffff;
 
     top: 50%;
     left: 50%;
@@ -106,8 +126,7 @@ section.collections {
 
     border-radius: 50%;
     background: #E6E6EB;
-    box-shadow: 9px 9px 17px #7c7c7f,
-    -9px -9px 17px #ffffff;
+
 
     border: none;
     outline: none;
@@ -160,8 +179,6 @@ section.collections {
     border-radius: 50px;
 
     background: #E6E6EB;
-    box-shadow: 9px 9px 17px #7c7c7f,
-    -9px -9px 17px #ffffff;
 
 }
 

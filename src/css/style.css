@@ -1,25 +1,25 @@
 @font-face {
     font-family: "Ortica Bold - Angular";
-    src: url("../../fonts/Ortica/OrticaAngular-Bold.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
+    src: url("../../assets/fonts/Ortica/OrticaAngular-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
 }
 
 @font-face {
     font-family: "Ortica Bold - Linear";
-    src: url("../../fonts/Ortica/OrticaLinear-Bold.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaLinear-Bold.woff") format("woff");
+    src: url("../../assets/fonts/Ortica/OrticaLinear-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Ortica/OrticaLinear-Bold.woff") format("woff");
 }
 
 @font-face {
     font-family: "Ortica Light";
-    src: url("../../fonts/Ortica/OrticaLinear-Light.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
+    src: url("../../assets/fonts/Ortica/OrticaLinear-Light.woff2") format("woff2"),
+    url("../../assets/fonts/Ortica/OrticaAngular-Bold.woff") format("woff");
 }
 
 @font-face {
     font-family: "Ortica";
-    src: url("../../fonts/Ortica/OrticaLinear-Regular.woff2") format("woff2"),
-    url("../../fonts/Ortica/OrticaLinear-Regular.woff") format("woff");
+    src: url("../../assets/fonts/Ortica/OrticaLinear-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Ortica/OrticaLinear-Regular.woff") format("woff");
 }
 
 *{
@@ -30,6 +30,8 @@
     font-family: "Ortica", sans-serif;
 
     color: #E6E6EB;
+
+    transition: 200ms;
 
 }
 
