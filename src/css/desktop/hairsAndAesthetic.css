@@ -49,7 +49,7 @@ section.collections {
 
     transform: translate(-50%, -60%);
 
-    z-index: 100;
+    z-index: 1;
 }
 
 .click_me a {
@@ -99,7 +99,7 @@ section.collections {
     border-radius: 50px;
 }
 
-.buttons {
+.buttons_collections {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -116,7 +116,7 @@ section.collections {
     pointer-events: none;
 }
 
-.buttons button {
+.buttons_collections button {
     width: clamp(50px, 5vw, 5vw);
     height: clamp(50px, 5vw, 5vw);
 
@@ -192,7 +192,6 @@ section.collections {
     align-items: center;
     justify-content: center;
 }
-
 
 .card img {
     width: 90%;

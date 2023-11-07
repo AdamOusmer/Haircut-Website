@@ -84,120 +84,165 @@ main {
 
 /* Card selection */
 
-.cards {
+.services {
 
     display: flex;
-
-    height: 110vh;
-    width: 100vw;
-    box-sizing: border-box;
 
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    flex-direction: column;
+
+    margin-top: 10vh;
+
+    overflow: hidden;
+
+    padding-bottom: 10vh;
+
+    height: 70vh;
+    width: 100vw;
+}
+
+.services h2 {
+    flex: 1;
+
+    font-size: 3rem;
+}
+
+.services .buttons {
+
+    box-shadow: none;
+    margin-bottom: 15px;
+
+}
+
+.services .buttons pre {
+    color: #0D0D0F;
+}
+
+.cards {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    gap: 10%;
+
+    flex: 8;
+
 }
 
 .card {
-    display: flex;
     position: relative;
 
-    height: 90vh;
-    width: 30vw;
-}
+    flex: 1;
+    height: 300px;
+    width: clamp(300px, 15vw, 900px);
 
-.card:before {
-    content: "";
+    border-radius: 25px;
 
-    position: absolute;
-    display: block;
+    transition: 800ms ease;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 2rem;
-
-
-
-    height: 100%;
-    width: 100%;
-
-    opacity: 0;
-
-    z-index: 1;
-
-    transition: 700ms ease-in-out;
-}
-
-.card::after {
-    content: "";
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    color: #0D0D0F;
-    font-size: 2rem;
-    font-weight: 500;
-
-    display: block;
-
-    height: 100%;
-    width: 100%;
-
-    opacity: 0;
-    z-index: 2;
-
-    transition: 0.5s ease-in-out;
 }
 
 .card1 {
-    background: url("../../../assets/image/cards_home/penny.jpg") no-repeat center;
-    background-size: cover;
+    background: linear-gradient(#9A638B, transparent);
 }
 
-.card:hover:after {
-    opacity: 1;
-}
+.card1::before {
+    position: absolute;
 
-.card:hover:before {
-    opacity: 1;
-}
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-.card1::after {
-    content: "";
-    background: url("../../../assets/image/cards_home/penny_logo.PNG") #E6E6EB99 no-repeat center;
-    background-size: contain;
+    content: "Esthétique";
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .card2 {
-    background: url("../../../assets/image/cards_home/Karine.jpeg") no-repeat center;
-    background-size: cover;
+    background: linear-gradient(#6793A7, transparent);
 }
 
-.card2::after {
-    background: url("../../../assets/image/logo.png") #E6E6EB99 no-repeat center;
-    background-size: contain;
-}
 
 .card3 {
-    background: url("../../../assets/image/cards_home/formation.jpeg") #E6E6EB99 no-repeat center;
+    background: linear-gradient(#E4BBCC, transparent);
+}
+
+.cardHovered {
+
+    flex: 9;
+    width: clamp(900px, 50vw, 1500px);
+
+    height: clamp(500px, 50vh, 900px);
+
+}
+
+.cardHovered .background_cards {
+    opacity: 0;
+}
+
+.cardHovered .logo {
+    opacity: 1;
+}
+
+.cardHoveredOthers {
+    flex: 1;
+    height: 300px;
+}
+
+.background_cards {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 25px;
+
+    max-width: 90%;
+    max-height: 90%;
+    height: auto;
+    width: auto;
+
+    background-position: center;
     background-size: cover;
-    filter: grayscale(100%) brightness(120%) contrast(110%)
+    background-repeat: no-repeat;
 
+    transition: 800ms ease;
 }
 
-.card3::after {
-    /* TODO add the correct logo for the formation card*/
-    background: url("../../../assets/image/logo.png") #E6E6EB99 no-repeat center;
-    background-size: contain;
+.logo {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: 800ms ease;
 }
+
 
 /* About section */
 
-.about{
+.about {
     position: relative;
     display: flex;
     align-items: start;
@@ -213,11 +258,11 @@ main {
     background: #E6E6EB;
 }
 
-.about *{
+.about * {
     color: #0D0D0F;
 }
 
-.left-element{
+.left-element {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -228,14 +273,14 @@ main {
     gap: 5vh;
 }
 
-.textAbout-wrapper{
+.textAbout-wrapper {
     display: flex;
     flex-direction: column;
 
     gap: 5vh;
 }
 
-.about pre{
+.textAbout-wrapper pre {
     white-space: pre-wrap;
     text-align: justify;
     width: 40vw;
@@ -243,158 +288,22 @@ main {
     font-size: 1.25rem;
 }
 
-.a-wrapper{
+.a-wrapper {
     display: flex;
 
     gap: 5vw;
 }
 
-@keyframes fill_the_button {
-
-to {
-    transform: scale(15);
-    opacity: 1;
-}
-
-}
-
-.buttons {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 200px;
-    height: 50px;
-
-    border-radius: 25px;
-    background: #E6E6EB;
-    box-shadow:  20px 20px 60px #9c9ca0,
-    -20px -20px 60px #ffffff;
-
-    overflow: hidden;
-
-    transition: 1000ms ease-in-out;
-}
-
-.buttons .circleAbout {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 20px;
-    height: 20px;
-
-    border-radius: 50%;
-
-    background: #9A638B;
-
-    opacity: 0;
-
-    z-index: 1;
-
-}
-
-.buttons:hover .circleAbout {
-    animation: fill_the_button 1000ms ease-in-out 900ms forwards;
-    animation-delay: 400ms;
-}
-
-.buttons pre {
-    z-index: 2;
-
-    font-size: 1.15rem;
-
-    text-align: center;
-}
-
-.buttons a{
-    z-index: 2;
-}
-
-.buttons:hover a{
-    color: #E6E6EB;
-}
-
-
-@keyframes  crossing_dot_before{
-
-    0%{
-        left: 110%;
-    }
-
-    100%{
-        left: 50%;
-    }
-
-}
-
-@keyframes  crossing_dot_after{
-
-    0%{
-        left: -10%;
-    }
-
-    100%{
-        left: 50%;
-    }
-
-}
-
-.buttons::before{
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 110%;
-    transform: translate(-50%, -50%);
-
-    width: 20px;
-    height: 20px;
-
-    border-radius: 50%;;
-
-    background: #9A638B;
-}
-
-
-.buttons::after{
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: -10%;
-    transform: translate(-50%, -50%);
-
-    width: 20px;
-    height: 20px;
-
-    border-radius: 50%;;
-
-    background: #9A638B;
-}
-
-.buttons:hover::before{
-    animation: crossing_dot_before 700ms ease-in-out;
-}
-
-.buttons:hover::after{
-    animation: crossing_dot_after 700ms ease-in-out;
-}
-
-.about h1{
+.about h1 {
     font-size: 4rem;
     font-weight: 700;
 }
 
-.effectText{
+.effectText {
     display: none;
 }
 
-.hoveredButtons{
+.hoveredButtons {
     display: block;
     position: absolute;
     top: 0;
@@ -407,21 +316,21 @@ to {
     pointer-events: none;
 }
 
-.hoveredButtons h1{
+.hoveredButtons h1 {
     text-align: center;
     font-size: 800%;
 
     border-radius: 95px;
-    text-shadow:  15px 15px 20px #7c7c7f,
+    text-shadow: 15px 15px 20px #7c7c7f,
     -15px -15px 20px #ffffff;
 
 }
 
-.left-element img{
+.left-element img {
     height: auto;
     width: 70%;
 }
 
-footer{
+footer {
     margin-top: 2%;
 }

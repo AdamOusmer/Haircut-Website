@@ -34,7 +34,7 @@ main {
     -9px -9px 17px #ffffff;
 }
 
-.header{
+.header {
     width: 80vw;
     height: 90vh;
 
@@ -48,7 +48,7 @@ main {
     -9px -9px 17px #ffffff;
 }
 
-.header img{
+.header img {
     height: 99%;
     width: 99%;
 
@@ -58,13 +58,13 @@ main {
 
 }
 
-.pictures{
+.pictures {
     position: relative;
     width: 100%;
     height: 200vh;
 }
 
-.pictures img{
+.pictures img {
     border-radius: 50px;
     box-shadow: 9px 9px 17px #7c7c7f,
     -9px -9px 17px #ffffff;
@@ -84,6 +84,7 @@ main {
     transition: transform ease-in-out 0.4s;
 
 }
+
 .ball2 {
     position: absolute;
 
@@ -97,6 +98,7 @@ main {
     transition: transform ease-in-out 0.8s;
 
 }
+
 .ball3 {
     position: absolute;
     top: 55%;
@@ -108,6 +110,7 @@ main {
     transition: transform ease-in-out 0.5s;
 
 }
+
 .ball4 {
     position: absolute;
     top: 25%;
