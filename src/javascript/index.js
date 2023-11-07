@@ -16,6 +16,44 @@ let isTabletOrPhone = /tablet|ipad/i.test(userAgent) || /mobile|iphone|android/i
 let targetX = 0;
 let targetY = 0;
 
+
+// Cookie alert
+
+let acceptCookie = false;
+const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+
+function accepted() {
+    acceptCookie = true;
+    document.querySelector('.cookieAlert').style.display = 'none';
+
+    localStorage.setItem('cookieAccepted', 'true')
+}
+
+
+function cookieAlert() {
+
+    const cookie = document.createElement('div');
+    cookie.classList.add('cookieAlert');
+
+    cookie.innerHTML = `
+        <h1>POUR T’OFFRIR UNE MEILLEURE EXPÉRIENCE</h1>
+        <pre>Nous utilisons des témoins pour optimiser ton expérience, à des fins d'analyse et de marketing. En cliquant sur « Accepter tout », tu consents à l'utilisation de tous les témoins.        
+        </pre>
+        <a class="hovered buttons" onclick="accepted()">
+        <pre>Accepter tout</pre>
+        <div class="circleAbout"></div>
+        </a>
+    `;
+
+    if (cookiesAccepted !== "true") {
+        document.body.appendChild(cookie);
+    }
+
+}
+
+cookieAlert();
+
 if (!isTabletOrPhone) {
 // Tracker
     document.addEventListener('mousemove', e => {
@@ -99,9 +137,7 @@ function animateLogo() {
             y = y * maxExtension[index] / 1000;
 
             logo.animate({transform: `translate(${x - 50}%, ${y - 50}%)`}, {
-                duration: 1000,
-                easing: 'ease-in-out',
-                fill: 'both'
+                duration: 1000, easing: 'ease-in-out', fill: 'both'
             });
 
         })
@@ -168,41 +204,5 @@ function scrollPortfolio(element, direction) {
             clearInterval(slideTimer);
         }
     }, 1); // Adjust the interval duration for smoother animation
-
-}
-
-
-// Cookie alert
-
-let acceptCookie = false;
-const cookiesAccepted = localStorage.getItem('cookiesAccepted');
-
-
-function accepted() {
-    acceptCookie = true;
-    document.querySelector('.cookieAlert').style.display = 'none';
-
-    localStorage.setItem('cookieAccepted', 'true')
-}
-
-function cookieAlert() {
-
-    console.log('cookie')
-
-    const cookie = document.createElement('div');
-    cookie.classList.add('cookieAlert');
-
-    cookie.innerHTML = `
-
-        <h1>POUR T’OFFRIR UNE MEILLEURE EXPÉRIENCE</h1>
-        <pre>
-        Nous utilisons des témoins pour optimiser ton expérience, à des fins d'analyse et de marketing. En cliquant sur « Accepter tout », tu consents à l'utilisation de tous les témoins.        
-        </pre>
-        <a class="buttons" onclick="accepted()">Accepter tout</a>
-    `;
-
-    if (!JSON.parse(cookiesAccepted)) {
-        cookie.style.display = 'flex';
-    }
 
 }

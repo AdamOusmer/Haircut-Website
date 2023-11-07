@@ -159,7 +159,7 @@ main {
 .card1::before {
     position: absolute;
 
-    top: -10%;
+    bottom: -15%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -172,9 +172,33 @@ main {
     background: linear-gradient(#6793A7, transparent);
 }
 
+.card2::before {
+    position: absolute;
+
+    bottom: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    content: "Coiffure";
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 
 .card3 {
     background: linear-gradient(#E4BBCC, transparent);
+}
+
+.card3::before {
+    position: absolute;
+
+    bottom: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    content: "Formation";
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .cardHovered {
@@ -299,36 +323,11 @@ main {
     font-weight: 700;
 }
 
-.effectText {
-    display: none;
-}
-
-.hoveredButtons {
-    display: block;
-    position: absolute;
-    top: 0;
-
-    height: 100vh;
-    width: 100vw;
-
-    z-index: 0;
-
-    pointer-events: none;
-}
-
-.hoveredButtons h1 {
-    text-align: center;
-    font-size: 800%;
-
-    border-radius: 95px;
-    text-shadow: 15px 15px 20px #7c7c7f,
-    -15px -15px 20px #ffffff;
-
-}
-
 .left-element img {
+    max-height: 600px;
+    max-width: 70%;
+    width: auto;
     height: auto;
-    width: 70%;
 }
 
 footer {
