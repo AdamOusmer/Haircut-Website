@@ -20,14 +20,16 @@ let targetY = 0;
 // Cookie alert
 
 let acceptCookie = false;
-const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+const cookiesAccepted = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
 
 
 function accepted() {
     acceptCookie = true;
     document.querySelector('.cookieAlert').style.display = 'none';
 
-    localStorage.setItem('cookieAccepted', 'true')
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    document.cookie = `cookiesAccepted=true; expires=${d.toUTCString()}; path=/`;
 }
 
 

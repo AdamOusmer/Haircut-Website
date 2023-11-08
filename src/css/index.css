@@ -276,8 +276,8 @@ footer *{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: clamp(400px, 40vw, 1000px);
-    height: clamp(450px, 40vh, 900px);
+    padding: 20px 0;
+    max-width: 700px;
 
     background: #E6E6EB;
     border: #9A638B 2px solid;
