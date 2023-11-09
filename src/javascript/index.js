@@ -20,8 +20,14 @@ let targetY = 0;
 // Cookie alert
 
 let acceptCookie = false;
-const cookiesAccepted = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
 
+document.cookie = `test=true; expires=${265}; path=/`;
+
+
+
+const cookieFind = document.cookie.split('; ')
+
+const cookiesAccepted = cookieFind.find === 'true';
 
 function accepted() {
     acceptCookie = true;
@@ -48,7 +54,9 @@ function cookieAlert() {
         </a>
     `;
 
-    if (cookiesAccepted !== "true") {
+    if (cookiesAccepted === true) {
+        console.log('cookies not accepted')
+        console.log(cookiesAccepted)
         document.body.appendChild(cookie);
     }
 
