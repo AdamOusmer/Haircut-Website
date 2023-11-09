@@ -28,7 +28,7 @@ function accepted() {
     document.querySelector('.cookieAlert').style.display = 'none';
 
     const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    d.setTime(d.getTime() + (31*24*60*60*1000));
     document.cookie = `cookiesAccepted=true; expires=${d.toUTCString()}; path=/`;
 }
 
